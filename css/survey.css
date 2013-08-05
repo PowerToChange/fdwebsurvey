@@ -19,7 +19,6 @@ body {
 
 .container {
 	/* border: 1px dashed red;*/ 
-	height: 460px;
 }
 
 input { height: 1em; }
@@ -28,6 +27,7 @@ input[type=radio] { margin-right: 0.3em;}
 .size_3 { font-size: 1.75em; }
 .size_2 { font-size: 1.25em; }
 
+.push5 { margin-top: 5%; }
 .push10 { margin-top: 10%; }
 .push20 { margin-top: 20%; }
 
@@ -70,30 +70,30 @@ select { width: 7em; }
 
 @media screen and (max-width: 450px) {
 	#viewer { font-size: 0.75em; }
-	.container { height: 460px; /* iPhone portrait*/  }
-	.max33 { max-width: 50%; }
+	.container { height: 440px; /* iPhone portrait*/  }
+	.max33 { width: 50%; }
 }
 @media screen and (min-width: 450px) {
 	#viewer { font-size: 0.87em; }
-	.container { height: 300px; /* iPhone landscape */ }
+	.container { height: 280px; /* iPhone landscape */ }
 }
 @media screen and (min-width: 550px) {
 	#viewer { font-size: 1em; }
-	.container { height: 370px; }
+	.container { height: 320px; }
 }
 @media screen and (min-width: 650px) {
 	#viewer { font-size: 1.15em; }
-	.container { height: 440px; }
+	.container { height: 380px; }
 }
 @media screen and (min-width: 750px) {
 	#viewer { font-size: 1.3em; }
-	.container { height: 510px; }
+	.container { height: 438px; }
 }
 @media screen and (min-width: 850px) {
 	#viewer { font-size: 1.5em; }
-	.container { height: 570px; }
+	.container { height: 495px; }
 }
 @media screen and (min-width: 950px) {
 	#viewer { font-size: 1.75em; }
-	.container { height: 650px; }
+	.container { height: 555px; }
 }

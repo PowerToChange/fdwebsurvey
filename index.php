@@ -34,7 +34,7 @@
 			  		<div class="grid_4 omega">
 			  			We want to know what you want. Take this survey to join the cravings conversation on your campus.
 			  		</div>
-			  		<div class="grid_7 push10 size_3">
+			  		<div class="grid_7 push5 size_3">
 			  			My university is: <?php include('campus_dropdown.html'); ?>
 			  		</div>
 			  		<div class="grid_5 push10 alpha">
