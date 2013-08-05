@@ -55,20 +55,24 @@ $(document).ready(function() {
 	});
 
 	// requires jquery.touchSwipe.min.js
-//	$('.container').swipe({
-//		swipe:function(event, direction, distance, duration, fingerCount){
-//			if(direction == 'left')
-//			{
-//				$('.forward-button:visible').click();
-//			}
-//			else if(direction == 'right')
-//			{
-//				$('#back-button:visible').click();
-//			}
-//		}, 
-//		threshold:50,
-//		allowPageScroll:"vertical"
-//	});
+	$('.container').swipe({
+		swipe:function(event, direction, distance, duration, fingerCount){
+			if(direction == 'left')
+			{
+				$('.forward-button:visible').click();
+			}
+			else if(direction == 'right')
+			{
+				$('#back-button:visible').click();
+			}
+		}, 
+		threshold:50,
+		allowPageScroll:"vertical"
+	});
+	
+	$('input').swipe("disable");
+	$('a').swipe("disable");
+	$('.selector').swipe("disable");
 
 });
 
