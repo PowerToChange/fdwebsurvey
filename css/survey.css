@@ -74,7 +74,7 @@ select { width: 7em; }
 
 @media screen and (max-width: 450px) {
 	#viewer { font-size: 0.75em; }
-	.container { height: 360px; /* iPhone portrait*/  }
+	.container { height: 340px; /* iPhone portrait*/  }
 	.max33 { width: 50%; }
 }
 @media screen and (min-width: 450px) {
