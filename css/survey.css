@@ -19,6 +19,7 @@ body {
 
 .container {
 	/* border: 1px dashed red;*/ 
+	height: 460px;
 }
 
 input { height: 1em; }
@@ -26,6 +27,9 @@ input[type=radio] { margin-right: 0.3em;}
 
 .size_3 { font-size: 1.75em; }
 .size_2 { font-size: 1.25em; }
+
+.push10 { margin-top: 10%; }
+.push20 { margin-top: 20%; }
 
 .screen {
 }
@@ -41,7 +45,7 @@ img { width: 100%; }
 .input_error { background-color: #FF8888; }
 div.input_error {background-color: #FFFFFF; border-left: solid 2px #FF8888;}
 select { width: 7em; }
-#messages { font-size: 0.8em; }
+#messages { font-size: 0.9em; }
 
 #action-buttons a {
 	background-color: #0000FF;
@@ -64,9 +68,10 @@ select { width: 7em; }
 	width: 100%;
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (max-width: 450px) {
 	#viewer { font-size: 0.75em; }
-	.container { height: 480px; /* iPhone portrait*/  }
+	.container { height: 460px; /* iPhone portrait*/  }
+	.max33 { max-width: 50%; }
 }
 @media screen and (min-width: 450px) {
 	#viewer { font-size: 0.87em; }

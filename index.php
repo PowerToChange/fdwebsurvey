@@ -34,13 +34,13 @@
 			  		<div class="grid_4 omega">
 			  			We want to know what you want. Take this survey to join the cravings conversation on your campus.
 			  		</div>
-			  		<div class="grid_7 size_3">
+			  		<div class="grid_7 push10 size_3">
 			  			My university is: <?php include('campus_dropdown.html'); ?>
 			  		</div>
-			  		<div class="grid_5 alpha">
+			  		<div class="grid_5 push10 alpha">
 			  			brought to you by Power to Change &amp; myCravings.ca
 			  		</div>
-			  		<div class="grid_2 omega">
+			  		<div class="grid_2 push10 omega max33">
 			  			<object data="img/p2c.svg" type="image/svg+xml">
 			  				<a href="img/p2c.svg">
 			  					<!--[if lte IE 8]-->
