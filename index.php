@@ -4,6 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<title>P2C Survey 2013</title>
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	  <script src="js/jquery.touchSwipe.min.js"></script>
 	  <script src="js/surveys.js"></script>
 	  <link rel="stylesheet" type="text/css" href="css/normalize.css">
 	  <link rel="stylesheet" type="text/css" href="css/grid.css">
