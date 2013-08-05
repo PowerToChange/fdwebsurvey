@@ -44,6 +44,9 @@ $(document).ready(function() {
     }
 	});
 
+	$('.selector').click(function(){
+		$('#'+$(this).attr('activates')).click();
+	});
 	
 	//removing error class when input changes
 	$(':input').change(function(){

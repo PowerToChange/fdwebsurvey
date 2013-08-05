@@ -27,9 +27,9 @@ input[type=radio] { margin-right: 0.3em;}
 .size_3 { font-size: 1.75em; }
 .size_2 { font-size: 1.25em; }
 
-.push5 { margin-top: 5%; }
-.push10 { margin-top: 10%; }
-.push20 { margin-top: 20%; }
+.push5 { margin-top: 2.5%; }
+.push10 { margin-top: 5%; }
+.push20 { margin-top: 10%; }
 
 .screen {
 }
@@ -68,6 +68,10 @@ select { width: 7em; }
 	width: 100%;
 }
 
+.selector {
+	cursor: pointer;
+}
+
 @media screen and (max-width: 450px) {
 	#viewer { font-size: 0.75em; }
 	.container { height: 440px; /* iPhone portrait*/  }
@@ -75,25 +79,25 @@ select { width: 7em; }
 }
 @media screen and (min-width: 450px) {
 	#viewer { font-size: 0.87em; }
-	.container { height: 280px; /* iPhone landscape */ }
+	.container { height: 240px; /* iPhone landscape */ }
 }
 @media screen and (min-width: 550px) {
 	#viewer { font-size: 1em; }
-	.container { height: 320px; }
+	.container { height: 275px; }
 }
 @media screen and (min-width: 650px) {
 	#viewer { font-size: 1.15em; }
-	.container { height: 380px; }
+	.container { height: 325px; }
 }
 @media screen and (min-width: 750px) {
 	#viewer { font-size: 1.3em; }
-	.container { height: 438px; }
+	.container { height: 375px; }
 }
 @media screen and (min-width: 850px) {
 	#viewer { font-size: 1.5em; }
-	.container { height: 495px; }
+	.container { height: 425px; }
 }
 @media screen and (min-width: 950px) {
 	#viewer { font-size: 1.75em; }
-	.container { height: 555px; }
+	.container { height: 475px; }
 }

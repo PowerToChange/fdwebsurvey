@@ -54,11 +54,26 @@
 			  	<div class="screen size_2">
 			  		
 			      <div class="grid_7">The one thing I crave most is:</div>
-			      <div class="grid_6 indented omega"><input type="radio" name="cravemost" value="warmup-fun">fun</input></div>
-			      <div class="grid_6 indented omega"><input type="radio" name="cravemost" value="warmup-relationship">relationship</input></div>
-			      <div class="grid_6 indented omega"><input type="radio" name="cravemost" value="warmup-money">money</input></div>
-			      <div class="grid_6 indented omega"><input type="radio" name="cravemost" value="warmup-grades">good grades</input></div>
-			      <div class="grid_6 indented omega"><input type="radio" name="cravemost" value="warmup-other">other</input></div>
+						<div class="grid_6 indented omega">
+							<input id="radio-cwf" type="radio" name="cravemost" value="warmup-fun" />
+							<span class="selector" activates="radio-cwf">fun</span>
+						</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-cwr" type="radio" name="cravemost" value="warmup-relationship" />
+							<span class="selector" activates="radio-cwr">relationship</span>
+						</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-cwm" type="radio" name="cravemost" value="warmup-money" />
+							<span class="selector" activates="radio-cwm">money</span>
+						</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-cwg" type="radio" name="cravemost" value="warmup-grades" />
+							<span class="selector" activates="radio-cwg">good grades</span>
+						</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-cwo" type="radio" name="cravemost" value="warmup-other" />
+							<span class="selector" activates="radio-cwo">other</span>
+						</div>
 			  	</div>
 			  	<div class="screen">
 						<p>I’d like a <strong>FREE MAGAZINE BY PERSONAL DELIVERY</strong> to help me explore my craving for:</p>
