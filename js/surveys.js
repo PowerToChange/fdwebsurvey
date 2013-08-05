@@ -63,7 +63,8 @@ $(document).ready(function() {
 				$('#back-button:visible').click();
 			}
 		}, 
-		threshold:50
+		threshold:50,
+		allowPageScroll:"vertical"
 	});
 
 });
