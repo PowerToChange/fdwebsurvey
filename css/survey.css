@@ -24,12 +24,14 @@ body {
 input { height: 1em; }
 input[type=radio] { margin-right: 0.3em;}
 
+.size_5 { font-size: 4em; }
 .size_3 { font-size: 1.75em; }
 .size_2 { font-size: 1.25em; }
 
 .push5 { margin-top: 2.5%; }
 .push10 { margin-top: 5%; }
-.push20 { margin-top: 10%; }
+.push20 { margin-top: 20%; }
+.textcenter { text-align: center; }
 
 .screen {
 }
@@ -37,6 +39,8 @@ input[type=radio] { margin-right: 0.3em;}
 #messages {
 	position: absolute;
 	bottom: 15%;
+	width: 100%;
+	text-align: right;
 }
 
 img { width: 100%; }
@@ -44,7 +48,7 @@ img { width: 100%; }
 .errors {color: red;}
 .input_error { background-color: #FF8888; }
 div.input_error {background-color: #FFFFFF; border-left: solid 2px #FF8888;}
-select { width: 7em; }
+select, input[type=text], input[type=tel], input[type=email]  { width: 7em; }
 #messages { font-size: 0.9em; }
 
 #action-buttons a {
@@ -76,6 +80,7 @@ select { width: 7em; }
 	#viewer { font-size: 0.75em; }
 	.container { height: 340px; /* iPhone portrait*/  }
 	.max33 { width: 50%; }
+	.grid_5.indented { width: 80%; margin-left: 10%; margin-right:10%; }
 }
 @media screen and (min-width: 450px) {
 	#viewer { font-size: 0.87em; }

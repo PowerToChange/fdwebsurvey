@@ -35,7 +35,7 @@
 			  		<div class="grid_4 omega">
 			  			We want to know what you want. Take this survey to join the cravings conversation on your campus.
 			  		</div>
-			  		<div class="grid_7 push5 size_3">
+			  		<div class="grid_7 push5">
 			  			My university is: <?php include('campus_dropdown.html'); ?>
 			  		</div>
 			  		<div class="grid_5 push10 alpha">
@@ -76,75 +76,128 @@
 						</div>
 			  	</div>
 			  	<div class="screen">
-						<p>I’d like a <strong>FREE MAGAZINE BY PERSONAL DELIVERY</strong> to help me explore my craving for:</p>
-						<div>
-							<input type="radio" name="magazine" value="spiritual-connection">spiritual connection</input>
-							<input type="radio" name="magazine" value="justice">a real justice</input>
-							<input type="radio" name="magazine" value="escape">escape from the dreariness of life</input>
-							<input type="radio" name="magazine" value="success">achievement &amp; success</input>
-							<input type="radio" name="magazine" value="love">love without conditions</input>
-							<input type="radio" name="magazine" value="no">No, thanks</input>
+						<div class="grid_7">I’d like a <strong>FREE MAGAZINE BY PERSONAL DELIVERY</strong> to help me explore my craving for:</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-msc" type="radio" name="magazine" value="spiritual-connection" />
+							<span class="selector" activates="radio-msc">spiritual connection</span>
+						</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-mj" type="radio" name="magazine" value="justice" />
+							<span class="selector" activates="radio-mj">a real justice</span>
+						</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-me" type="radio" name="magazine" value="escape" />
+							<span class="selector" activates="radio-me">escape from the dreariness of life</span>
+						</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-mss" type="radio" name="magazine" value="success" />
+							<span class="selector" activates="radio-mss">achievement &amp; success</span>
+						</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-ml" type="radio" name="magazine" value="love" />
+							<span class="selector" activates="radio-ml">love without conditions</span>
+						</div>
+						<div class="grid_6 indented omega">
+							<input id="radio-mn" type="radio" name="magazine" value="no" />
+							<span class="selector" activates="radio-mn">No, thanks</span>
 						</div>
 			  	</div>
 			  	<div class="screen">
-						<em>Power to Change loves to help students discover Jesus.</em>
-						<p>How interested are you in having a chat about how to begin a journey with Jesus Christ?</p>
-						<div>
-							<input type="radio" name="interested" value="1">1 - not</input>
-							<input type="radio" name="interested" value="2">2 - </input>
-							<input type="radio" name="interested" value="3">3 - maybe</input>
-							<input type="radio" name="interested" value="4">4 - </input>
-							<input type="radio" name="interested" value="5">5 - very</input>
+						<div class="grid_7"><em>Power to Change loves to help students discover Jesus.</em></div>
+						<div class="grid_7">How interested are you in having a chat about how to begin a journey with Jesus Christ?</div>
+						<div class="grid_1 indented">
+							<input id="radio-1" type="radio" name="interested" value="1" />
+							<span class="selector" activates="radio-1">1<br/>not</span>
+						</div>
+						<div class="grid_1">
+							<input id="radio-2" type="radio" name="interested" value="2" />
+							<span class="selector" activates="radio-2">2<br/> </span>
+						</div>
+						<div class="grid_1">
+							<input id="radio-3" type="radio" name="interested" value="3" />
+							<span class="selector" activates="radio-3">3<br/>maybe</span>
+						</div>
+						<div class="grid_1">
+							<input id="radio-4" type="radio" name="interested" value="4" />
+							<span class="selector" activates="radio-4">4</span>
+						</div>
+						<div class="grid_1">
+							<input id="radio-5" type="radio" name="interested" value="5" />
+							<span class="selector" activates="radio-5">5<br/>very</span>
 						</div>
 			  	</div>
 			  	<div class="screen">
-						<p>On my spiritual journey I’d like to:</p>
-						<div>
-							<input type="radio" name="wouldliketo" value="explore-cravings">explore the deeper meaning of my cravings</input>
-							<input type="radio" name="wouldliketo" value="online- resources">get connected to online resources about my cravings</input>
-							<input type="radio" name="wouldliketo" value="hear-more">hear more about Power to Change</input>
-							<input type="radio" name="wouldliketo" value="grow">grow in my relationship with Jesus</input>
-							<input type="radio" name="wouldliketo" value="nothing">do nothing right now</input>
+						<div class="grid_7">On my spiritual journey I’d like to:</div>
+						<div class="grid_6 indented">
+							<input id="radio-wec" type="radio" name="wouldliketo" value="explore-cravings" />
+							<span class="selector" activates="radio-wec">explore the deeper meaning of my cravings</span>
+						</div>
+						<div class="grid_6 indented">
+							<input id="radio-wor" type="radio" name="wouldliketo" value="online-resources" />
+							<span class="selector" activates="radio-wor">get connected to online resources about my cravings</span>
+						</div>
+						<div class="grid_6 indented">
+							<input id="radio-whm" type="radio" name="wouldliketo" value="hear-more" />
+							<span class="selector" activates="radio-whm">hear more about Power to Change</span>
+						</div>
+						<div class="grid_6 indented">
+							<input id="radio-wg" type="radio" name="wouldliketo" value="grow" />
+							<span class="selector" activates="radio-wg">grow in my relationship with Jesus</span>
+						</div>
+						<div class="grid_6 indented">
+							<input id="radio-wn" type="radio" name="wouldliketo" value="nothing" />
+							<span class="selector" activates="radio-wn">do nothing right now</span>
 						</div>
 			  	</div>
 			  	<div class="screen" order="last">
-			  		<div class="form_label">First Name:</div>
-						<div class="form_input"><input name="first_name" display-name="first name" type="text" /></div>
-			  		<div class="form_label">Last Name:</div>
-						<div class="form_input"><input name="last_name" display-name="last name" type="text" /></div>
-						<div>
-							<input type="radio" name="gender" value="male">Male</input>
-							<input type="radio" name="gender" value="female">Female</input>
+			  		<div class="grid_3">First Name: <input name="first_name" display-name="first name" type="text" /></div>
+			  		<div class="grid_4">Last Name: <input name="last_name" display-name="last name" type="text" /></div>
+						<div class="grid_7">
+							<input id="radio-male" type="radio" name="gender" value="male">
+							<span class="selector" activates="radio-male">Male</span>
+							<input id="radio-female" type="radio" name="gender" value="female">
+							<span class="selector" activates="radio-female">Female</span>
 						</div>
-			  		<div class="form_label">Cell Phone:</div>
-						<div class="form_input"><input name="cellphone" type="tel" /></div>
-			  		<div class="form_label">Email:</div>
-						<div class="form_input"><input name="email" type="email" /></div>
-						Year
-						<div>
-							<input type="radio" name="year" value="1">1</input>
-							<input type="radio" name="year" value="2">2</input>
-							<input type="radio" name="year" value="3">3</input>
-							<input type="radio" name="year" value="4">4</input>
-							<input type="radio" name="year" value="5">5</input>
-							<input type="radio" name="year" value="Grad">Grad</input>
+			  		<div class="grid_7">Cell Phone: <input name="cellphone" type="tel" /></div>
+			  		<div class="grid_7">Email: <input name="email" type="email" /></div>
+			  		<div class="grid_7">
+						Year:
+							<input id="radio-y1" type="radio" name="year" value="1" />
+							<span class="selector" activates="radio-y1">1&nbsp;&nbsp;</span>
+							<input id="radio-y2" type="radio" name="year" value="2" />
+							<span class="selector" activates="radio-y2">2&nbsp;&nbsp;</span>
+							<input id="radio-y3" type="radio" name="year" value="3" />
+							<span class="selector" activates="radio-y3">3&nbsp;&nbsp;</span>
+							<input id="radio-y4" type="radio" name="year" value="4" />
+							<span class="selector" activates="radio-y4">4&nbsp;&nbsp;</span>
+							<input id="radio-y5" type="radio" name="year" value="5" />
+							<span class="selector" activates="radio-y5">5&nbsp;&nbsp;</span>
+							<input id="radio-yg" type="radio" name="year" value="Grad" />
+							<span class="selector" activates="radio-yg">Grad</span>
 						</div>
-			  		<div class="form_label">Faculty/Degree:</div>
-						<div class="form_input"><input name="faculty" type="text" display-name="faculty or degree" /></div>
-			  		<div class="form_label">On Campus Residence:</div>
-						<div class="form_input"><input name="residence" type="text" is-required="false" /></div>
-						<input type="checkbox" name="international"/> I am an international student 
+			  		<div class="grid_7">Faculty/Degree: <input name="faculty" type="text" display-name="faculty or degree" /></div>
+						<div class="grid_7">
+							<input id="international" type="checkbox" name="international"/>
+							<span class="selector" activates="international"> I am an international student</span>
+						</div> 
 			  	</div>
 			  	<div class="screen" order="thankyou">
-			  		THANK YOU!
-			  		[myCravings img]
-			  		
+			  		<div class="grid_7 textcenter size_5">
+			  			THANK YOU!
+			  		</div>
+			  		<div class="grid_5 indented">
+			  			<object data="img/mycravings.svg" type="image/svg+xml">
+			  				<a href="img/mycravings.svg">
+			  					<!--[if lte IE 8]-->
+						  			<img src="img/mycravings.gif"/>
+			  					<!--[endif]-->
+			  				</a>
+			  			</object>
+			  		</div>
 			  	</div>
 			  	<div class="screen" order="error-submitting">
-			  		We're sorry, it looks like there was an error while trying to submit your survey. 
-			  		
-			  		Would you like to try to submit it again?
-			  		
+			  		<div class="grid_7 textcenter size_3 push10">We're sorry, it looks like there was an error while trying to submit your survey.</div>
+			  		<div class="grid_7 textcenter size_3 push10">Would you like to try to submit it again?</div>
 			  	</div>
 			  </div>
 			  <div id="messages">
@@ -153,9 +206,9 @@
 			  <div id="action-buttons">
 			  	<a id="back-button">Back</a>
 			  	<a id="next-button" class="forward-button">Next</a>
-			  	<a id="retry-button">Retry</a>
-			  	<a id="reset-button">Restart</a>
-			  	<a id="submit-button" class="forward-button">Submit</a>
+			  	<a id="retry-button" class="forward-button">Try Submit Again</a>
+			  	<a id="reset-button">Reset Survey</a>
+			  	<a id="submit-button" class="forward-button">Submit Survey</a>
 			  </div>
 			</div>
 		</div>

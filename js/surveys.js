@@ -54,7 +54,11 @@ $(document).ready(function() {
 		$(this).parent().removeClass('input_error');
 	});
 
-	// requires jquery.touchSwipe.min.js
+/*
+ * 
+ * THIS CODE BREAKS THE USABILITY OF RADIO BUTTON ON IPODS AND IPHONES
+ *  
+ 	// requires jquery.touchSwipe.min.js
 	$('.container').swipe({
 		swipe:function(event, direction, distance, duration, fingerCount){
 			if(direction == 'left')
@@ -70,9 +74,11 @@ $(document).ready(function() {
 		allowPageScroll:"vertical"
 	});
 	
+	// Trying to fix radio buttons on ipods and iphones
 	$('input').swipe("disable");
 	$('a').swipe("disable");
 	$('.selector').swipe("disable");
+*/
 
 });
 
@@ -137,7 +143,7 @@ function serror(str) { smsg('<span class="errors">' + str + '</span>'); }
 function survey_run_validations()
 {
 	var is_valid = true;
-	
+	//return true;
 	// for each telephone input
 	$('.screen:visible input[type="tel"]').each(function(){
 		var phone = /^[\d\(\)-]{7,14}$/;
