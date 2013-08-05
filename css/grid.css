@@ -35,6 +35,17 @@
 	padding: 2.5%;
 }
 
-
-
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
+
+/* ipod or iphone portrait mode */
+@media screen and (max-width: 450px) {
+	.grid_2,
+	.grid_3,
+	.grid_4,
+	.grid_5,
+	.grid_6,
+	.grid_7 {
+		width: 100%; 
+	}
+
+}

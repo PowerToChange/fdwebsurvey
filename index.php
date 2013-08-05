@@ -23,7 +23,13 @@
 			  <div class="screens">
 			  	<div class="screen" order="first">
 			  		<div class="grid_3 alpha">
-			  			<img src="img/mycravings.gif"/>
+			  			<object data="img/mycravings.svg" type="image/svg+xml">
+			  				<a href="img/mycravings.svg">
+			  					<!--[if lte IE 8]-->
+						  			<img src="img/mycravings.gif"/>
+			  					<!--[endif]-->
+			  				</a>
+			  			</object>
 			  		</div>
 			  		<div class="grid_4 omega">
 			  			We want to know what you want. Take this survey to join the cravings conversation on your campus.
@@ -35,7 +41,13 @@
 			  			brought to you by Power to Change &amp; myCravings.ca
 			  		</div>
 			  		<div class="grid_2 omega">
-			  			<img src="img/p2c.gif"/>
+			  			<object data="img/p2c.svg" type="image/svg+xml">
+			  				<a href="img/p2c.svg">
+			  					<!--[if lte IE 8]-->
+						  			<img src="img/p2c.gif"/>
+			  					<!--[endif]-->
+			  				</a>
+			  			</object>
 			  		</div>
 			  	</div>
 			  	<div class="screen size_2">

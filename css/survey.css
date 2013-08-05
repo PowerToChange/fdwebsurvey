@@ -9,13 +9,16 @@ body {
 }
 
 #viewer {
-	height: 480px;
 	position:relative;
 	text-align: left;
+	height: 100%;
 	
 	background:#FFFFFF;
-	margin-top: 50px;
 	font-size: 0.75em; 
+}
+
+.container {
+	/* border: 1px dashed red;*/ 
 }
 
 input { height: 1em; }
@@ -46,7 +49,13 @@ select { width: 7em; }
 	border-radius: 5px;
 	padding: 0.5em 1em;
 	cursor: pointer;
-	margin: 10px;
+	margin: 0 5% 0 0;
+	float: left; 
+}
+
+#action-buttons a.forward-button {
+	margin: 0 0 0 5%;
+	float: right;
 }
 
 #action-buttons {
@@ -55,27 +64,31 @@ select { width: 7em; }
 	width: 100%;
 }
 
-#next-button, #submit-button, #retry-button { float: right; }
-#back-button, #reset-button { float: left; }
-
 @media screen and (min-width: 350px) {
 	#viewer { font-size: 0.75em; }
+	.container { height: 480px; /* iPhone portrait*/  }
 }
 @media screen and (min-width: 450px) {
 	#viewer { font-size: 0.87em; }
+	.container { height: 300px; /* iPhone landscape */ }
 }
 @media screen and (min-width: 550px) {
 	#viewer { font-size: 1em; }
+	.container { height: 370px; }
 }
 @media screen and (min-width: 650px) {
 	#viewer { font-size: 1.15em; }
+	.container { height: 440px; }
 }
 @media screen and (min-width: 750px) {
 	#viewer { font-size: 1.3em; }
+	.container { height: 510px; }
 }
 @media screen and (min-width: 850px) {
 	#viewer { font-size: 1.5em; }
+	.container { height: 570px; }
 }
 @media screen and (min-width: 950px) {
 	#viewer { font-size: 1.75em; }
+	.container { height: 650px; }
 }
