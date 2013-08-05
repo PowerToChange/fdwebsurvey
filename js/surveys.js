@@ -36,6 +36,14 @@ $(document).ready(function() {
 	$('#reset-button').click(function(){
 		survey_reset_screen();
 	});
+
+	$('body').keypress(function(e) {
+    if(e.which == 13) {
+    		e.preventDefault();
+    		$('.forward-button:visible').click();
+    }
+	});
+
 	
 	//removing error class when input changes
 	$(':input').change(function(){

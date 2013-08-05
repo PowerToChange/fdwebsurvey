@@ -6,38 +6,38 @@ body {
 	font-family: Tahoma, Verdana, Arial, sans-serif;
 	width: 100%;
 	height: 100%;
-	background: #111111;
 }
 
 #viewer {
-	width: 400px;
-	height: 400px;
-	max-width: 100%;
-	max-height: 100%;
-	margin: auto;
+	height: 480px;
 	position:relative;
 	text-align: left;
 	
 	background:#FFFFFF;
 	margin-top: 50px;
-	border-radius: 5px;
-	border: 1px solid #0000FF;
+	font-size: 0.75em; 
 }
 
+input { height: 1em; }
+input[type=radio] { margin-right: 0.3em;}
+
+.size_3 { font-size: 1.75em; }
+.size_2 { font-size: 1.25em; }
+
 .screen {
-	padding: 10px;
 }
 
 #messages {
-	padding: 10px;
 	position: absolute;
 	bottom: 50px;
 }
 
+img { width: 100%; }
+
 .errors {color: red;}
 .input_error { background-color: #FF8888; }
 div.input_error {background-color: #FFFFFF; border-left: solid 2px #FF8888;}
-select { width: 175px; }
+select { width: 7em; }
 #messages { font-size: 0.8em; }
 
 #action-buttons a {
@@ -57,3 +57,25 @@ select { width: 175px; }
 
 #next-button, #submit-button, #retry-button { float: right; }
 #back-button, #reset-button { float: left; }
+
+@media screen and (min-width: 350px) {
+	#viewer { font-size: 0.75em; }
+}
+@media screen and (min-width: 450px) {
+	#viewer { font-size: 0.87em; }
+}
+@media screen and (min-width: 550px) {
+	#viewer { font-size: 1em; }
+}
+@media screen and (min-width: 650px) {
+	#viewer { font-size: 1.15em; }
+}
+@media screen and (min-width: 750px) {
+	#viewer { font-size: 1.3em; }
+}
+@media screen and (min-width: 850px) {
+	#viewer { font-size: 1.5em; }
+}
+@media screen and (min-width: 950px) {
+	#viewer { font-size: 1.75em; }
+}

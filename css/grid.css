@@ -1,0 +1,40 @@
+/*
+ Width: 800px
+ # Columns : 7 
+ Column width: 98px
+ Gutter : 19px 
+
+ */
+.grid_1 { width: 12.25%; }
+.grid_2 { width: 26.875%; }
+.grid_3 { width: 41.5%; }
+.grid_4 { width: 56.125%; }
+.grid_5 { width: 70.75%; }
+.grid_6 { width: 85.375%; }
+.grid_7 { width: 100%; }
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7 {
+	margin: 0 2.375% 1.1875% 0;
+	float: left;
+	display: block;
+}
+
+.alpha{margin-left:0px;}
+.omega{margin-right:0px;}
+.indented{margin-left: 14.625%}
+
+.container{
+	max-width: 1000px; 
+	margin: auto;
+	padding: 2.5%;
+}
+
+
+
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
