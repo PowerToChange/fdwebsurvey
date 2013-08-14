@@ -105,7 +105,8 @@ function survey_update_buttons()
 	$('#retry-button').hide();
 	$('#reset-button').show();
 	$('#submit-button').hide();
-
+	$('#visit-button').hide();
+	
 	switch($('.screen:visible').attr('order')) {
 		
 		case 'first':
@@ -122,6 +123,7 @@ function survey_update_buttons()
 			$('#back-button').hide();
 			$('#next-button').hide();
 			$('#reset-button').show();
+			$('#visit-button').show();
 			break;
 			
 		case 'error-submitting':

@@ -1,4 +1,10 @@
 
+html {
+	height: 100%;
+	background: url('../img/testbkg.jpg') #360000;
+	background-size: cover;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -6,6 +12,17 @@ body {
 	font-family: Tahoma, Verdana, Arial, sans-serif;
 	width: 100%;
 	height: 100%;
+}
+
+.wrapper {
+	padding: 2em;
+	max-width: 1000px;
+	border: 0.25em solid rgba(0,0,0,.8);
+	border-radius: 5em 2em;
+	background: #FFF;
+	background-clip: padding-box;
+	margin: 4em auto;
+	box-shadow: inset 0.25em 0.25em 0.75em 0.2em rgba(0,0,0,.8);
 }
 
 #viewer {
@@ -45,20 +62,27 @@ input[type=radio] { margin-right: 0.3em;}
 
 img { width: 100%; }
 
-.errors {color: red;}
-.input_error { background-color: #FF8888; }
-div.input_error {background-color: #FFFFFF; border-left: solid 2px #FF8888;}
+.errors {color: #F99839;}
+.input_error { background-color: #F99839; }
+div.input_error {background-color: #FFFFFF; border-left: solid 2px #F99839;}
 select, input[type=text], input[type=tel], input[type=email]  { width: 7em; }
 #messages { font-size: 0.9em; }
 
 #action-buttons a {
 	background-color: #0000FF;
 	color: white;
-	border-radius: 5px;
+	border-radius: 1.5em;
 	padding: 0.5em 1em;
 	cursor: pointer;
 	margin: 0 5% 0 0;
 	float: left; 
+	text-decoration: none;
+	border: 0.1em solid rgba(0,0,70,.3);
+	box-shadow: 0.15em 0.15em 0.3em 0.01em rgba(0,0,0,.8);
+}
+
+#action-buttons a:active {
+	box-shadow: inset 0.15em 0.15em 0.3em 0.01em rgba(0,0,0,.8);
 }
 
 #action-buttons a.forward-button {
