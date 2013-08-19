@@ -22,7 +22,10 @@
 		<div class="wrapper">
 			<div class="container">
 				<div id="viewer" class="tk-nimbus-sans">
-				  <div class="screens">
+					<noscript>
+						<div class="grid_7 size_3 push20">Sorry, you really need to turn on javascript to fill this survey online.</div>
+					</noscript>
+				  <div class="screens not_visible">
 				  	<div class="screen" order="first">
 				  		<div class="grid_3 alpha">
 				  			<object data="img/mycravings.svg" type="image/svg+xml">
@@ -200,11 +203,15 @@
 				  		<div class="grid_7 textcenter size_3 push10">We're sorry, it looks like there was an error while trying to submit your survey.</div>
 				  		<div class="grid_7 textcenter size_3 push10">Would you like to try to submit it again?</div>
 				  	</div>
+				  	<div class="screen" order="submitting">
+				  		<div class="grid_7 textcenter size_3 push10">Submitting &hellip;</div>
+				  		<div class="grid_7 textcenter original_size size_3 push10"><img src="img/submitting.gif" /></div>
+				  	</div>
 				  </div>
 				  <div id="messages">
 				  	
 				  </div>
-				  <div id="action-buttons">
+				  <div id="action-buttons" class="not_visible">
 				  	<a id="back-button">Back</a>
 				  	<a id="next-button" class="forward-button">Next</a>
 				  	<a id="retry-button" class="forward-button">Try Submit Again</a>

@@ -22,6 +22,8 @@ body {
 	font-size: 0.75em; 
 }
 
+.not_visible { display: none; }
+
 .container {
 	/* border: 1px dashed red;*/ 
 }
@@ -37,7 +39,7 @@ input[type=radio] { margin-right: 0.3em;}
 .push10 { margin-top: 5%; }
 .push20 { margin-top: 20%; }
 .textcenter { text-align: center; }
-
+.original_size img { width: auto; }
 .screen {
 }
 
@@ -58,6 +60,11 @@ select, input[type=text], input[type=tel], input[type=email]  { width: 7em; }
 
 #action-buttons a {
 	background-color: #0000FF;
+	background-image: linear-gradient(#21B6EA, #0079C1);
+	background-image: -o-linear-gradient(#21B6EA, #0079C1);
+	background-image: -moz-linear-gradient(#21B6EA, #0079C1);
+	background-image: -webkit-linear-gradient(#21B6EA, #0079C1);
+	background-image: -ms-linear-gradient(#21B6EA, #0079C1);
 	color: white;
 	border-radius: 1.5em;
 	padding: 0.5em 1em;

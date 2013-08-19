@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	
+	$('.screens, #action-buttons').removeClass("not_visible");
+	
 	survey_reset_screen();
 	
 	// Buttons' functions
@@ -20,17 +22,13 @@ $(document).ready(function() {
 	$('#submit-button').click(function(){
 		survey_clear_messages();
 		if(survey_run_validations()) {
-			$('.screen:visible').hide();
-			$('.screen[order="error-submitting"]').show();
-			survey_update_buttons();
+			survey_submit();
 		}
 	});
 
 	$('#retry-button').click(function(){
 		survey_clear_messages();
-		$('.screen:visible').hide();
-		$('.screen[order="thankyou"]').show();
-		survey_update_buttons();
+		survey_submit();
 	});
 
 	$('#reset-button').click(function(){
@@ -133,6 +131,12 @@ function survey_update_buttons()
 			$('#reset-button').show();
 			break;
 			
+		case 'submitting':
+			$('#back-button').hide();
+			$('#next-button').hide();
+			$('#reset-button').hide();
+			break;
+			
 		default:
 			break;
 	}
@@ -221,4 +225,59 @@ function survey_run_validations()
 	});
 	
 	return is_valid;
+}
+
+function survey_show_screen(order)
+{
+	$('.screen:visible').hide();
+	$('.screen[order="' + order + '"]').show();
+	survey_update_buttons();
+}
+
+/*
+
+	<select id="campus" name="campus">
+	<input id="radio-cwf" type="radio" name="cravemost" value="warmup-fun" />
+	<input id="radio-msc" type="radio" name="magazine" value="spiritual-connection" />
+	<input id="radio-1" type="radio" name="interested" value="1" />
+	<input id="radio-wec" type="radio" name="wouldliketo" value="explore-cravings" />
+	<input name="first_name" display-name="first name" type="text" />
+	<input name="last_name" display-name="last name" type="text" />
+	<input id="radio-male" type="radio" name="gender" value="male">
+	<input name="cellphone" type="tel" />
+	<input name="email" type="email" />
+	<input name="faculty" type="text" display-name="faculty or degree" />
+	<input id="radio-yg" type="radio" name="year" value="Grad" />
+	<input id="international" type="checkbox" name="international"/>
+*/
+
+function survey_submit()
+{
+	
+	survey_show_screen('submitting');
+    // AJAX form submit. This controls what fields and values are sent back to 
+    // the server.
+	$.post("post-data.php",
+		{
+			campus : $('#campus').val(),
+
+			cravemost : $('input[name=cravemost]:checked').val(),
+			magazine : $('input[name=magazine]:checked').val(),
+			interested : $('input[name=interested]:checked').val(),
+			wouldliketo : $('input[name=wouldliketo]:checked').val(),
+
+			first_name :$('input[name=first_name]').val(),
+			last_name :$('input[name=last_name]').val(),
+			gender : $('input[name=gender]:checked').val(), 
+			email : $('input[name=email]').val(),
+			cellphone : $('input[name=cellphone]').val(),
+			year : $('input[name=year]:checked').val(), 
+			faculty : $('input[name=faculty]').val(),
+			international: $('#international').attr('checked') ? 'Yes' : 'No'
+
+		}, function(data, status, request) {
+			survey_show_screen('thankyou');
+	}, "json").error(function() {
+		survey_show_screen('error-submitting');
+	});
 }
