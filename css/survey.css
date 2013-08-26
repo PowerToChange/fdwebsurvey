@@ -18,7 +18,6 @@ body {
 	text-align: left;
 	height: 100%;
 	
-	background:#FFFFFF;
 	font-size: 0.75em; 
 }
 
@@ -55,16 +54,16 @@ img { width: 100%; }
 .errors {color: #F99839;}
 .input_error { background-color: #F99839; }
 div.input_error {background-color: #FFFFFF; border-left: solid 2px #F99839;}
-select, input[type=text], input[type=tel], input[type=email]  { width: 7em; }
+select, input[type=text], input[type=tel], input[type=email]  { width: 7em;  }
 #messages { font-size: 0.9em; }
 
 #action-buttons a {
 	background-color: #0000FF;
-	background-image: linear-gradient(#21B6EA, #0079C1);
 	background-image: -o-linear-gradient(#21B6EA, #0079C1);
 	background-image: -moz-linear-gradient(#21B6EA, #0079C1);
 	background-image: -webkit-linear-gradient(#21B6EA, #0079C1);
 	background-image: -ms-linear-gradient(#21B6EA, #0079C1);
+	background-image: linear-gradient(#21B6EA, #0079C1);
 	color: white;
 	border-radius: 1.5em;
 	padding: 0.5em 1em;

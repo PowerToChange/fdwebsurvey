@@ -1,0 +1,10 @@
+
+
+#p2clogo {
+	-webkit-animation: logofadein 4s ease-in;
+}
+
+@-webkit-keyframes logofadein {
+	0% { opacity: 0; }
+	100% { opacity: 1; } 
+}

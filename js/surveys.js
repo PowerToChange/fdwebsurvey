@@ -80,8 +80,6 @@ $(document).ready(function() {
 
 });
 
-
-
 // set every input to default value
 function survey_reset_screen()
 {
@@ -122,6 +120,7 @@ function survey_update_buttons()
 			$('#next-button').hide();
 			$('#reset-button').show();
 			$('#visit-button').show();
+			$('#retry-button').show();
 			break;
 			
 		case 'error-submitting':
@@ -152,7 +151,18 @@ function survey_run_validations()
 	//return true;
 	// for each telephone input
 	$('.screen:visible input[type="tel"]').each(function(){
-		var phone = /^[\d\(\)-]{7,14}$/;
+		var phone = /^[\d]{10}$/;
+		
+		var phone_in = $(this).val();
+		phone_in = phone_in.replace("(", "");
+		phone_in = phone_in.replace(")", "");
+		phone_in = phone_in.replace("-", "");
+		phone_in = phone_in.replace(".", "");
+		phone_in = phone_in.replace(/\b1/, "");
+		phone_in = phone_in.replace("+", "");
+		phone_in = phone_in.replace("#", "");
+		phone_in = phone_in.replace(" ", "");
+		$(this).val(phone_in);
 
 		//required 
 		if($(this).val() == '')
@@ -164,7 +174,7 @@ function survey_run_validations()
 		// invalid
 		else if(!phone.test($(this).val())){
 			is_valid = false;
-			serror('Please enter a valid cell phone number');
+			serror('Please enter a phone number with 10 digits, numbers only');
 			$(this).addClass('input_error');
 		}
 	});
@@ -205,7 +215,7 @@ function survey_run_validations()
 	$('.screen:visible input[type="radio"]').each(function(){
 		var nm = $(this).attr('name');
 		//required 
-		if(!$('input[name='+nm+']:checked').length)
+		if(!$('input[name="'+nm+'"]:checked').length)
 		{
 			is_valid = false;
 			radio_missing = true;
@@ -236,28 +246,6 @@ function survey_show_screen(order)
 
 /*
 
-	<select id="campus" name="campus">
-	<input id="radio-cwf" type="radio" name="cravemost" value="warmup-fun" />
-	<input id="radio-msc" type="radio" name="magazine" value="spiritual-connection" />
-	<input id="radio-1" type="radio" name="interested" value="1" />
-	<input id="radio-wec" type="radio" name="wouldliketo" value="explore-cravings" />
-	<input name="first_name" display-name="first name" type="text" />
-	<input name="last_name" display-name="last name" type="text" />
-	<input id="radio-male" type="radio" name="gender" value="male">
-	<input name="cellphone" type="tel" />
-	<input name="email" type="email" />
-	<input name="faculty" type="text" display-name="faculty or degree" />
-	<input id="radio-yg" type="radio" name="year" value="Grad" />
-	<input id="international" type="checkbox" name="international"/>
-*/
-
-function survey_submit()
-{
-	
-	survey_show_screen('submitting');
-    // AJAX form submit. This controls what fields and values are sent back to 
-    // the server.
-	$.post("post-data.php",
 		{
 			campus : $('#campus').val(),
 
@@ -273,11 +261,115 @@ function survey_submit()
 			cellphone : $('input[name=cellphone]').val(),
 			year : $('input[name=year]:checked').val(), 
 			faculty : $('input[name=faculty]').val(),
-			international: $('#international').attr('checked') ? 'Yes' : 'No'
+			international: $('#international').attr('checked') ? 'Yes' : 'No',
+			form_build_id: $('input[name=form_build_id]').val()
 
-		}, function(data, status, request) {
-			survey_show_screen('thankyou');
-	}, "json").error(function() {
-		survey_show_screen('error-submitting');
+		}
+
+	<select id="campus" name="campus">
+	<input id="radio-cwf" type="radio" name="cravemost" value="warmup-fun" />
+	<input id="radio-msc" type="radio" name="magazine" value="spiritual-connection" />
+	<input id="radio-1" type="radio" name="interested" value="1" />
+	<input id="radio-wec" type="radio" name="wouldliketo" value="explore-cravings" />
+	<input name="first_name" display-name="first name" type="text" />
+	<input name="last_name" display-name="last name" type="text" />
+	<input id="radio-male" type="radio" name="gender" value="male">
+	<input name="cellphone" type="tel" />
+	<input name="email" type="email" />
+	<input name="faculty" type="text" display-name="faculty or degree" />
+	<input id="radio-yg" type="radio" name="year" value="Grad" />
+	<input id="international" type="checkbox" name="international"/>
+	
+	
+submitted[civicrm_2_contact_1_contact_existing]
+submitted[the_one_thing_i_crave_most_is] : key-a, key-b, key-c, key-d, key-e 
+submitted[if_other]
+submitted[civicrm_1_activity_1_cg22_custom_155][magazine-spiritual]
+submitted[civicrm_1_activity_1_cg22_custom_155][magazine-justice]
+submitted[civicrm_1_activity_1_cg22_custom_155][magazine-love]
+submitted[civicrm_1_activity_1_cg22_custom_155][magazine-escape]
+submitted[civicrm_1_activity_1_cg22_custom_155][magazine-success]
+submitted[civicrm_1_activity_1_cg22_custom_155][magazine-no]
+submitted[civicrm_1_activity_1_cg22_custom_156][journey-explore]
+submitted[civicrm_1_activity_1_cg22_custom_156][journey-online]
+submitted[civicrm_1_activity_1_cg22_custom_156][journey-p2c]
+submitted[civicrm_1_activity_1_cg22_custom_156][journey-grow]
+submitted[civicrm_1_activity_1_cg22_custom_156][journey-nothing]
+submitted[civicrm_1_activity_1_cg22_custom_157] : gauge-1, gauge-2, gauge-3, gauge-4, gauge-5
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_first_name]
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_last_name]
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_phone_phone]
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_email_email]
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_57] : 1, 2, 3, 4, 5, grad
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_58] (if other)
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_59] (faculty/degree)
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_60] (campus residence)
+submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_61][yes]
+submitted[civicrm_1_activity_1_cg22_custom_159] (person entering data)
+submitted[civicrm_1_activity_1_activity_details] (notes)
+<input type="hidden" name="details[sid]" value="" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<input type="hidden" name="form_build_id" value="form-fuzAOSkakP2UTD5Ur3k4gacS4oGCHkzxlIplqjOer8A" />
+<input type="hidden" name="form_id" value="webform_client_form_15" />
+*/
+
+var the_xhr;
+var the_ts;
+var the_et;
+
+function survey_submit()
+{
+	
+	survey_show_screen('submitting');
+	
+	// gathering data
+	data = new Object();
+	
+	// text inputs
+	$('input[type="text"], input[type="tel"], input[type="email"], input[type="hidden"], input[type="checkbox"]:checked, input[type="radio"]:checked, select').each(function(){
+		data[$(this).attr('name')] = $(this).val();
 	});
+	
+    // AJAX form submit. This controls what fields and values are sent back to 
+    // the server.
+/*	$.post("https://stagehub.p2c.com/node/15", data).done(function(data, status, request) {
+			survey_show_screen('thankyou');
+	}, "json").fail(function(xhr, textStatus, errorThrown) {
+		survey_show_screen('error-submitting');
+		the_xhr = xhr;
+		the_ts = textStatus;
+		the_et = errorThrown;
+		serror(xhr.responseText);
+	});
+*/
+	$.ajax({
+		type: "POST",
+		url: "post-data.php",
+		data: data,
+		success: function(msg) { survey_show_screen('thankyou'); smsg(msg);	},
+		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			survey_show_screen('error-submitting');
+			the_xhr = XMLHttpRequest;
+			the_ts = textStatus;
+			the_et = errorThrown;
+			serror('error: ' + XMLHttpRequest.responseText);
+		}
+		
+	});
+	
+	
+	/*
+	("https://stagehub.p2c.com/node/15", data).done(function(data, status, request) {
+			survey_show_screen('thankyou');
+	}, "json").fail(function(xhr, textStatus, errorThrown) {
+		survey_show_screen('error-submitting');
+		the_xhr = xhr;
+		the_ts = textStatus;
+		the_et = errorThrown;
+		serror(xhr.responseText);
+	});*/
 }
