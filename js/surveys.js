@@ -120,7 +120,6 @@ function survey_update_buttons()
 			$('#next-button').hide();
 			$('#reset-button').show();
 			$('#visit-button').show();
-			$('#retry-button').show();
 			break;
 			
 		case 'error-submitting':
