@@ -1,7 +1,7 @@
 <?php
 include_once('blackbox.php');
 
-$select_campus = "<select id=\"campus\" name=\"submitted[civicrm_2_contact_1_contact_existing]\"><option value=\"none\" disabled selected>Select</option><option value=\"30412\">Other</option>";
+$select_campus = "<select id=\"campus\" name=\"submitted[civicrm_2_contact_1_fieldset_fieldset][civicrm_2_contact_1_contact_existing]\"><option value=\"none\" disabled selected>Select</option><option value=\"30412\">Other</option>";
 $reply = get_schools();
 if($reply) foreach ($reply as $school => $data) {
 	if($data["contact_id"] != '30412')

@@ -10,6 +10,7 @@ include_once('civi_constants.php');
 ob_start();
 var_dump($_POST);
 //$params = convertArray($_POST);
+//createTableSQL($_POST);
 insertDataInDB($_POST['submitted']);
 //http_call($params);
 $data = ob_get_clean();

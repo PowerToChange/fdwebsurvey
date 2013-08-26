@@ -349,15 +349,18 @@ function survey_submit()
 		type: "POST",
 		url: "post-data.php",
 		data: data,
-		success: function(msg) { survey_show_screen('thankyou'); smsg(msg);	},
-		error: function(XMLHttpRequest, textStatus, errorThrown) {
-			survey_show_screen('error-submitting');
-			the_xhr = XMLHttpRequest;
-			the_ts = textStatus;
-			the_et = errorThrown;
-			serror('error: ' + XMLHttpRequest.responseText);
-		}
-		
+		dataType: 'html'
+	}).done(function() {
+		$.ajax({
+			type: "POST",
+			url: "https://hub.p2c.com/node/11",
+			data: data,
+			dataType: 'html',
+			success: function(msg) { survey_show_screen('thankyou'); },
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+				survey_show_screen('thankyou');
+			}
+		})
 	});
 	
 	
