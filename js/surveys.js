@@ -83,12 +83,14 @@ $(document).ready(function() {
 // set every input to default value
 function survey_reset_screen()
 {
+	var pre_campus = $('input[name="preselected_campus"]').val();
+	if(pre_campus == "") pre_campus = 'none';
 	$('.screen').hide();
 	$('.screens').children().first().show();
 	$('input[type="email"],input[type="tel"],input[type="text"]').val('').removeClass('input_error');
 	$('input[type="radio"],input[type="checkbox"]').prop('checked', false);
 	$('input[type="radio"]').parent().removeClass('input_error');
-	$('#campus').val('none').removeClass('input_error');
+	$('#campus').val(pre_campus).removeClass('input_error');
 	survey_clear_messages();
 	survey_update_buttons();	
 }

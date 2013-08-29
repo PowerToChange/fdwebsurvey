@@ -20,6 +20,7 @@
 	</head>
 	<body>
   	<form action="https://hub.p2c.com/node/11" method="post">
+  		<?php include('preselect_campus.php'); ?>
 
 		<div class="wrapper">
 			<div class="container">
