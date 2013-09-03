@@ -82,7 +82,7 @@
       "action" => "get",
       "rowCount" => "1000",
       "contact_sub_type" => "School",
-      "return" => "organization_name"
+      "return" => "organization_name,geo_code_1,geo_code_2,street_address,city,postal_code"
       );
 
     $allParams = array_merge($postData, $schoolData);
