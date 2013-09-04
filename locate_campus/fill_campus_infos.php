@@ -1,3 +1,4 @@
+
 <?php
 /*
 <!DOCTYPE html>
@@ -11,21 +12,37 @@
 	</head>
 	<body>
 
-
 */
 include('../blackbox.php');
 
-	define('GEOLITE_DB_HOST', 'localhost');
-	define('GEOLITE_DB_USER', 'root');
-	define('GEOLITE_DB_PASSWORD', '');
-	define('GEOLITE_DB_DATABASE', 'geolite');
 
 
 
  
 
 	$link = mysqli_connect(GEOLITE_DB_HOST, GEOLITE_DB_USER, GEOLITE_DB_PASSWORD, GEOLITE_DB_DATABASE) or die("Error " . mysqli_error($link));
-/*
+/*	$query = "select locId, city from locations where country = 'CA'";
+	$result = $link->query($query);
+	while ($row = mysqli_fetch_array($result)) {
+		extract($row);
+		$link->query("UPDATE close_universities SET city = '$city' WHERE locId = $locId;");
+		echo '.';
+	}
+	
+
+/* 
+	$query = "select locId, longitude, latitude from locations where country = 'CA'";
+	$result = $link->query($query);
+
+	while ($row = mysqli_fetch_array($result)) {
+		extract($row);
+		$ulist = get_closest_universities($link, array('locId' => $locId, 'longitude' => $longitude, 'latitude' => $latitude));
+		$link->query("UPDATE close_universities SET universities = '$ulist' WHERE locId = $locId;");
+		echo '.';
+	}
+ */
+ 
+ /*
 	$query = "select locId from locations where country = 'CA'";
 	$result = $link->query($query);
 	while ($row = mysqli_fetch_array($result)) {
@@ -37,8 +54,41 @@ include('../blackbox.php');
 	*/
 
  //echo get_closest_universities($link, 404049);
-	/*
-	$query = "select * from universities";
+/*
+ 	$query = "select * from close_universities where locId = 39";
+	$result = $link->query($query);
+	$closest_university = NULL;
+	$close_universities = array();
+	if($row = mysqli_fetch_array($result))
+	{
+		$close_universities = explode(',', $row['universities']);
+		$campuses = json_decode(file_get_contents('../campuses.json'), true);
+	}
+ ?>
+ <select id="campus" name="submitted[civicrm_2_contact_1_fieldset_fieldset][civicrm_2_contact_1_contact_existing]"><option value="none" disabled selected>Select</option><option value="30412">Other</option><option value="57218">Academy of Applied Pharmaceutical Sciences</option>
+ <?php
+	if(count($close_universities))
+	{
+		echo "<optgroup label=\"Close to $city\">";
+		
+		echo "</optgroup>";
+ 	}
+ ?>
+</select>
+<?php
+  	
+	*/
+	
+	$query = "select * from close_universities limit 40";
+	$result = $link->query($query);
+	echo "<table>";
+	echo "<tr><th>locId</th><th>city</th><th>universities</th></tr>";
+	while ($row = mysqli_fetch_array($result)) {
+		extract($row);
+		echo "<tr><td>$locId</td><td>$city</td><td>$universities</td></tr>";
+	}
+	echo "</table>";
+/*	$query = "select * from universities";
 	$result = $link->query($query);
 	echo "<table>";
 	echo "<tr><th>id</th><th>name</th><th>lng</th><th>lat</th><th>address</th><th>city</th><th>postal_code</th></tr>";
@@ -47,20 +97,58 @@ include('../blackbox.php');
 		echo "<tr><td>$id</td><td>$name</td><td>$lng</td><td>$lat</td><td>$address</td><td>$city</td><td>$postal_code</td></tr>";
 	}
 	echo "</table>";
+	/*
+	$query = "select * from close_universities";
+	$result = $link->query($query);
+	while ($row = mysqli_fetch_array($result)) {
+		extract($row);
+		$u = explode(',', $univiersities);
+		var_dump($u);
+		break;
+		$final = array();
+		for ($i=0; $i < 8; $i++) { 
+			if($u[$i] != '30412' && count($final) < 7) $final[] = $u[$i];
+		}
+		$list = implode(',', $final);
+		$link->query("UPDATE close_universities SET universities = '$list' where locId = $locId;");
+		echo '.';
+	}
+
+	$query = "select * from close_universities limit 10";
+	$result = $link->query($query);
+	echo "<table>";
+	echo "<tr><th>id</th><th>universities</th></tr>";
+	while ($row = mysqli_fetch_array($result)) {
+		extract($row);
+		echo "<tr><td>$locId</td><td>$universities</td></tr>";
+	}
+	echo "</table>";
 	*/
-	
-	function get_closest_universities($link, $locId)
-	{
-		$ret = "";
-		// get (longitude,latitude) from locId
-		extract(mysqli_fetch_array($link->query("select longitude, latitude from locations where locId = $locId;")));
 		
+	function get_closest_universities($link, $data)
+	{
+		global $db_universities;
+		$ret = "";
+		extract($data);
+		
+		// get (longitude,latitude) from locId
+		//extract(mysqli_fetch_array($link->query("select longitude, latitude from locations where locId = $locId;")));
+		
+		if(!$db_universities)
+		{
+			$db_universities = array();
+			$query = "select id, lng, lat from universities where id <> 30412;";
+			$result = $link->query($query);
+			while ($row = mysqli_fetch_array($result)) {
+				extract($row);
+				$db_universities[] = array('id' => $id, 'lng' => $lng, 'lat' => $lat);
+			}
+		}
 		// get all universities and get square distance
+
 		$universities = array();
-		$query = "select id, lng, lat from universities where id <> 30412;";
-		$result = $link->query($query);
-		while ($row = mysqli_fetch_array($result)) {
-			extract($row);
+		foreach($db_universities as $university) {
+			extract($university);
 			$universities[$id] = ($longitude - $lng) * ($longitude - $lng) + ($latitude - $lat) * ($latitude - $lat);  
 		}
 		asort($universities);
@@ -69,7 +157,7 @@ include('../blackbox.php');
 			$i++;
 			if($i != 1) $ret .= ',';
 			$ret .= $key;
-			if($i >= 40) break;
+			if($i >= 7) break;
 		}
 		return $ret;
 	}

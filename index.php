@@ -20,7 +20,6 @@
 	</head>
 	<body>
   	<form action="https://hub.p2c.com/node/11" method="post">
-  		<?php include('preselect_campus.php'); ?>
 
 		<div class="wrapper">
 			<div class="container">
@@ -43,7 +42,7 @@
 				  			We want to know what you want. Take this survey to join the cravings conversation on your campus.
 				  		</div>
 				  		<div class="grid_7 push5">
-				  			My university is: <?php include('campus_dropdown.html'); ?>
+				  			My university is: <?php include('get_campus_dropdown.php'); ?>
 				  		</div>
 				  		<div class="grid_5 push10 alpha">
 				  			brought to you by Power to Change &amp; myCravings.ca
