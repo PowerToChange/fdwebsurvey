@@ -1,6 +1,3 @@
-
-<?php
-/*
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,6 +9,9 @@
 	</head>
 	<body>
 
+<?php
+/*
+
 */
 include('../blackbox.php');
 
@@ -21,13 +21,19 @@ include('../blackbox.php');
  
 
 	$link = mysqli_connect(GEOLITE_DB_HOST, GEOLITE_DB_USER, GEOLITE_DB_PASSWORD, GEOLITE_DB_DATABASE) or die("Error " . mysqli_error($link));
-/*	$query = "select locId, city from locations where country = 'CA'";
+	mysqli_set_charset($link, 'utf8');
+/*
+	$query = "select locId, city from locations where country = 'CA'";
 	$result = $link->query($query);
+	$i = 0;
+	$num = $result->num_rows;
 	while ($row = mysqli_fetch_array($result)) {
 		extract($row);
+		$i++;
 		$link->query("UPDATE close_universities SET city = '$city' WHERE locId = $locId;");
-		echo '.';
+		if($i % 100 == 0) echo "{$i}/{$num}<br/>";
 	}
+	echo "done";
 	
 
 /* 
@@ -78,7 +84,7 @@ include('../blackbox.php');
 <?php
   	
 	*/
-	
+	/*
 	$query = "select * from close_universities limit 40";
 	$result = $link->query($query);
 	echo "<table>";
@@ -220,6 +226,7 @@ include('../blackbox.php');
 
 
 	/*		
-	</body>
-</html>*/
+*/
 	?>
+	</body>
+</html>

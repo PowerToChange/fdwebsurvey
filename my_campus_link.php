@@ -29,7 +29,7 @@
 				  			Get the link to access to the survey with your campus pre-selected.
 				  		</div>
 				  		<div class="grid_7 push5">
-				  			My university is: <?php include('campus_dropdown.html'); ?>
+				  			My university is: <?php include('get_campus_dropdown.php'); ?>
 				  		</div>
 				  		<div id="result" class="grid_7 push10 original_size">
 				  			

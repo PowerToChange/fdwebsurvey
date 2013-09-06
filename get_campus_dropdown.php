@@ -7,7 +7,7 @@ $link = mysqli_connect(GEOLITE_DB_HOST, GEOLITE_DB_USER, GEOLITE_DB_PASSWORD, GE
 	$closest_university = NULL;
 	
 	// outputs: $close_universities and $city
-	extract(get_close_campuses($link)); // testing ips: 209.183.150.61 70.73.16.228
+	extract(get_close_campuses($link, '65.94.174.136')); // testing ips: 209.183.150.61 70.73.16.228
 	
 	$campuses = json_decode(file_get_contents('campuses.json'), true);
  ?>
