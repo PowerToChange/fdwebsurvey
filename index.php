@@ -2,7 +2,9 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<title>P2C Survey 2013</title>
+		<title>P2C Survey</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	  <script src="js/jquery.touchSwipe.min.js"></script>
 	  <script src="js/surveys.js"></script>
