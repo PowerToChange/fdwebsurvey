@@ -37,6 +37,7 @@ input[type=radio] { margin-right: 0.3em;}
 .push5 { margin-top: 2.5%; }
 .push10 { margin-top: 5%; }
 .push20 { margin-top: 20%; }
+.alignright { text-align: right; }
 .textcenter { text-align: center; }
 .original_size img { width: auto; }
 .screen {

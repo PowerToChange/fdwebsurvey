@@ -29,10 +29,10 @@
 					</noscript>
 				  <div class="screens not_visible">
 				  	<div class="screen" order="first">
-				  		<div class="grid_7 size_2 alpha omega">
+				  		<div class="grid_7 size_2 alpha omega textcenter">
 				  			Experience what a student experiences when they fill out a survey for P2C
 				  		</div>
-				      <div class="grid_7 push_5">The one thing I crave most is:</div>
+				      <div class="grid_7"><br />The one thing I crave most is:</div>
 							<div class="grid_6 indented omega">
 								<input id="radio-cwf" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup-fun" />
 								<span class="selector" activates="radio-cwf">fun</span>
@@ -158,25 +158,28 @@
                 <span class="selector" activates="radio-ixty-five">65+</span>
               </div>
             </div>
-				  	<div class="screen" order="last">
-				  		<div class="grid_3">First Name: <input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_first_name]" display-name="first name" type="text" /></div>
-				  		<div class="grid_4">Last Name: <input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_last_name]" display-name="last name" type="text" /></div>
-							<div class="grid_7">
-								<input id="radio-male" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="2">
-								<span class="selector" activates="radio-male">Male</span>
-								<input id="radio-female" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="1">
-								<span class="selector" activates="radio-female">Female</span>
-							</div>
-				  		<div class="grid_7">Phone Number: <input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_phone_phone]" type="tel" /></div>
-				  		<div class="grid_7">Email: <input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_email_email]" type="email" /></div>
-				  		<div class="grid_7">
-							We'd like to keep in touch! Would you like to receive email updates from P2C-Students?
-								<input id="radio-y1" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_activity_1_cg33_custom_242]" value="newsletter_yes" />
-								<span class="selector" activates="radio-y1">Yes</span>
-								<input id="radio-y2" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_activity_1_cg33_custom_242]" value="newsletter_no" />
-								<span class="selector" activates="radio-y2">No</span>
-							</div>
-				  	</div>
+            <div class="screen" order="last">
+              <div class="grid_3 alpha alignright">First Name: </div><div class="grid_4 omega"><input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_first_name]" display-name="first name" type="text" /></div>
+              <div class="grid_3 alpha alignright">Last Name: </div><div class="grid_4 omega"><input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_last_name]" display-name="last name" type="text" /></div>
+              <div class="grid_3 alpha">&nbsp;</div>
+              <div class="grid_4 omega">
+                <input id="radio-male" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="2">
+                <span class="selector" activates="radio-male">Male</span><br />
+                <input id="radio-female" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="1">
+                <span class="selector" activates="radio-female">Female</span>
+              </div>
+              <div class="grid_3 alpha alignright">Phone Number: </div><div class="grid_4 omega"><input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_phone_phone]" type="tel" /></div>
+              <div class="grid_3 alpha alignright">Email: </div><div class="grid_4 omega"><input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_email_email]" type="email" /></div>
+              <div class="grid_3 alpha push5">
+              Would you like to receive email updates from P2C-Students?
+              </div>
+              <div class="grid_4 omega push5">
+                <input id="radio-y1" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_activity_1_cg33_custom_242]" value="newsletter_yes" />
+                <span class="selector" activates="radio-y1">Yes</span><br />
+                <input id="radio-y2" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_activity_1_cg33_custom_242]" value="newsletter_no" />
+                <span class="selector" activates="radio-y2">No</span>
+              </div>
+            </div>
             <div class="screen" order="thankyou">
               <div class="grid_7 textcenter size_5">
                 THANK YOU!
