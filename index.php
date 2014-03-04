@@ -28,7 +28,7 @@
 						<div class="grid_7 size_3 push20">Sorry, you really need to turn on javascript to fill this survey online.</div>
 					</noscript>
 				  <div class="screens not_visible">
-				  	<div class="screen" order=first"">
+				  	<div class="screen" order="first">
 				  		<div class="grid_7 size_2 alpha omega">
 				  			Experience what a student experiences when they fill out a survey for P2C
 				  		</div>
