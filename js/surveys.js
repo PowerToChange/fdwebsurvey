@@ -52,32 +52,6 @@ $(document).ready(function() {
 		$(this).parent().removeClass('input_error');
 	});
 
-/*
- * 
- * THIS CODE BREAKS THE USABILITY OF RADIO BUTTON ON IPODS AND IPHONES
- *  
- 	// requires jquery.touchSwipe.min.js
-	$('.container').swipe({
-		swipe:function(event, direction, distance, duration, fingerCount){
-			if(direction == 'left')
-			{
-				$('.forward-button:visible').click();
-			}
-			else if(direction == 'right')
-			{
-				$('#back-button:visible').click();
-			}
-		}, 
-		threshold:50,
-		allowPageScroll:"vertical"
-	});
-	
-	// Trying to fix radio buttons on ipods and iphones
-	$('input').swipe("disable");
-	$('a').swipe("disable");
-	$('.selector').swipe("disable");
-*/
-
 });
 
 // set every input to default value
@@ -245,83 +219,6 @@ function survey_show_screen(order)
 	survey_update_buttons();
 }
 
-/*
-
-		{
-			campus : $('#campus').val(),
-
-			cravemost : $('input[name=cravemost]:checked').val(),
-			magazine : $('input[name=magazine]:checked').val(),
-			interested : $('input[name=interested]:checked').val(),
-			wouldliketo : $('input[name=wouldliketo]:checked').val(),
-
-			first_name :$('input[name=first_name]').val(),
-			last_name :$('input[name=last_name]').val(),
-			gender : $('input[name=gender]:checked').val(), 
-			email : $('input[name=email]').val(),
-			cellphone : $('input[name=cellphone]').val(),
-			year : $('input[name=year]:checked').val(), 
-			faculty : $('input[name=faculty]').val(),
-			international: $('#international').attr('checked') ? 'Yes' : 'No',
-			form_build_id: $('input[name=form_build_id]').val()
-
-		}
-
-	<select id="campus" name="campus">
-	<input id="radio-cwf" type="radio" name="cravemost" value="warmup-fun" />
-	<input id="radio-msc" type="radio" name="magazine" value="spiritual-connection" />
-	<input id="radio-1" type="radio" name="interested" value="1" />
-	<input id="radio-wec" type="radio" name="wouldliketo" value="explore-cravings" />
-	<input name="first_name" display-name="first name" type="text" />
-	<input name="last_name" display-name="last name" type="text" />
-	<input id="radio-male" type="radio" name="gender" value="male">
-	<input name="cellphone" type="tel" />
-	<input name="email" type="email" />
-	<input name="faculty" type="text" display-name="faculty or degree" />
-	<input id="radio-yg" type="radio" name="year" value="Grad" />
-	<input id="international" type="checkbox" name="international"/>
-	
-	
-submitted[civicrm_2_contact_1_contact_existing]
-submitted[the_one_thing_i_crave_most_is] : key-a, key-b, key-c, key-d, key-e 
-submitted[if_other]
-submitted[civicrm_1_activity_1_cg22_custom_155][magazine-spiritual]
-submitted[civicrm_1_activity_1_cg22_custom_155][magazine-justice]
-submitted[civicrm_1_activity_1_cg22_custom_155][magazine-love]
-submitted[civicrm_1_activity_1_cg22_custom_155][magazine-escape]
-submitted[civicrm_1_activity_1_cg22_custom_155][magazine-success]
-submitted[civicrm_1_activity_1_cg22_custom_155][magazine-no]
-submitted[civicrm_1_activity_1_cg22_custom_156][journey-explore]
-submitted[civicrm_1_activity_1_cg22_custom_156][journey-online]
-submitted[civicrm_1_activity_1_cg22_custom_156][journey-p2c]
-submitted[civicrm_1_activity_1_cg22_custom_156][journey-grow]
-submitted[civicrm_1_activity_1_cg22_custom_156][journey-nothing]
-submitted[civicrm_1_activity_1_cg22_custom_157] : gauge-1, gauge-2, gauge-3, gauge-4, gauge-5
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_first_name]
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_last_name]
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_phone_phone]
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_email_email]
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_57] : 1, 2, 3, 4, 5, grad
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_58] (if other)
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_59] (faculty/degree)
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_60] (campus residence)
-submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_cg7_custom_61][yes]
-submitted[civicrm_1_activity_1_cg22_custom_159] (person entering data)
-submitted[civicrm_1_activity_1_activity_details] (notes)
-<input type="hidden" name="details[sid]" value="" />
-<input type="hidden" name="details[page_num]" value="1" />
-<input type="hidden" name="details[page_count]" value="1" />
-<input type="hidden" name="details[finished]" value="0" />
-<input type="hidden" name="form_build_id" value="form-fuzAOSkakP2UTD5Ur3k4gacS4oGCHkzxlIplqjOer8A" />
-<input type="hidden" name="form_id" value="webform_client_form_15" />
-*/
-
-var the_xhr;
-var the_ts;
-var the_et;
-
 function survey_submit()
 {
 	
@@ -337,43 +234,18 @@ function survey_submit()
 	
     // AJAX form submit. This controls what fields and values are sent back to 
     // the server.
-/*	$.post("https://stagehub.p2c.com/node/15", data).done(function(data, status, request) {
-			survey_show_screen('thankyou');
-	}, "json").fail(function(xhr, textStatus, errorThrown) {
-		survey_show_screen('error-submitting');
-		the_xhr = xhr;
-		the_ts = textStatus;
-		the_et = errorThrown;
-		serror(xhr.responseText);
-	});
-*/
-	$.ajax({
+
+  $.ajax({
 		type: "POST",
-		url: "post-data.php",
+		url: "https://hub.p2c.com/node/38",
 		data: data,
-		dataType: 'html'
-	}).done(function() {
-		$.ajax({
-			type: "POST",
-			url: "https://hub.p2c.com/node/11",
-			data: data,
-			dataType: 'html',
-			success: function(msg) { survey_show_screen('thankyou'); },
-			error: function(XMLHttpRequest, textStatus, errorThrown) {
-				survey_show_screen('thankyou');
-			}
-		})
+		dataType: 'html',
+		success: function(msg) { survey_show_screen('thankyou'); },
+		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			survey_show_screen('thankyou');
+		}
 	});
 	
 	
-	/*
-	("https://stagehub.p2c.com/node/15", data).done(function(data, status, request) {
-			survey_show_screen('thankyou');
-	}, "json").fail(function(xhr, textStatus, errorThrown) {
-		survey_show_screen('error-submitting');
-		the_xhr = xhr;
-		the_ts = textStatus;
-		the_et = errorThrown;
-		serror(xhr.responseText);
-	});*/
+
 }
