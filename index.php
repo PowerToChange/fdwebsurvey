@@ -131,9 +131,11 @@
 								<input id="radio-wn" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-nothing" />
 								<span class="selector" activates="radio-wn">do nothing right now</span>
 							</div>
-				  	</div>
+            </div>
             <div class="screen">
-              <div class="grid_7">We hope that gives you an idea of one of the creative methods that we use to engage  students on campus.  Now we have a few questions for you:</div>
+              <div class="grid_7 size_3 textcenter">We hope that gives you an idea of one of the creative methods that we use to engage  students on campus.  Now we have a few questions for you...</div>
+            </div>
+            <div class="screen">
               <div class="grid_7">How old were you when you really began to explore faith questions?</div>
               <div class="grid_6 indented omega">
                 <input id="radio-five" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="5-10" />
