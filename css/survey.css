@@ -53,8 +53,8 @@ input[type=radio] { margin-right: 0.3em;}
 img { width: 100%; }
 
 .errors {color: #F99839;}
-.input_error { background-color: #F99839; }
-div.input_error {background-color: #FFFFFF; border-left: solid 2px #F99839;}
+.input_error { background-color: #FFE683; }
+div.input_error {background-color: #FFE683; }
 select, input[type=text], input[type=tel], input[type=email]  { width: 7em;  }
 #messages { font-size: 0.9em; }
 

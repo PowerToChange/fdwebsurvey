@@ -236,16 +236,22 @@ function survey_submit()
     // the server.
 
   $.ajax({
-		type: "POST",
-		url: "https://hub.p2c.com/node/38",
-		data: data,
-		dataType: 'html',
-		success: function(msg) { survey_show_screen('thankyou'); },
-		error: function(XMLHttpRequest, textStatus, errorThrown) {
-			survey_show_screen('thankyou');
-		}
-	});
-	
-	
+    type: "POST",
+    url: "send_sms.php",
+    data: data,
+    dataType: 'html'
+  }).done(function() {
+    $.ajax({
+      type: "POST",
+      url: "https://hub.p2c.com/node/38",
+      data: data,
+      dataType: 'html',
+      success: function(msg) { survey_show_screen('thankyou'); },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        survey_show_screen('thankyou');
+      }
+    })
+  });
+
 
 }
