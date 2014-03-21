@@ -1,11 +1,4 @@
 
-.p2clogo {
-  width: 640px;
-  max-width: 100%;
-  margin: -60px auto -80px;
-  overflow:hidden;
-  
-}
 
 h4 {
   margin-top: 50px;
@@ -23,3 +16,9 @@ h4 {
 .errors {color: #F99839;}
 .input_error { background-color: #F99839; }
 div.input_error {background-color: #F99839; border-left: solid 2px #F99839;}
+
+@media screen and (min-width: 650px) {
+  .p2clogo {
+    width: 640px;
+  }
+}

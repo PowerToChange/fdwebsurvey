@@ -16,8 +16,8 @@
     <div class="container">
       <div class="screen" order="first">
         <div class="p2clogo">
-          <object data="img/P2C-S_LOGO.svg" type="image/svg+xml">
-            <a href="img/P2C-S_LOGO.svg">
+          <object data="img/logo-survey.svg" type="image/svg+xml">
+            <a href="img/logo-survey.svg">
               <!--[if lte IE 8]-->
                 <img src="img/p2c.gif"/>
               <!--[endif]-->
@@ -185,8 +185,8 @@
           </div>
       <div class="screen" order="thankyou">
         <div class="p2clogo">
-          <object data="img/P2C-S_LOGO.svg" type="image/svg+xml">
-            <a href="img/P2C-S_LOGO.svg">
+          <object data="img/logo-survey.svg" type="image/svg+xml">
+            <a href="img/logo-survey.svg">
               <!--[if lte IE 8]-->
                 <img src="img/p2c.gif"/>
               <!--[endif]-->
