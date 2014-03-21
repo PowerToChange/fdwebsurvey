@@ -1,8 +1,10 @@
 
-#p2clogo {
+.p2clogo {
   width: 640px;
   max-width: 100%;
-  margin: 0 auto;
+  margin: -60px auto -80px;
+  overflow:hidden;
+  
 }
 
 h4 {
@@ -17,3 +19,7 @@ h4 {
   margin-top: 20px;
   margin-bottom: 50px;
 }
+
+.errors {color: #F99839;}
+.input_error { background-color: #F99839; }
+div.input_error {background-color: #F99839; border-left: solid 2px #F99839;}

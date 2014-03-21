@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	
 	$('.screens, #action-buttons').removeClass("not_visible");
-	
 	survey_reset_screen();
 	
 	// Buttons' functions
@@ -60,7 +59,7 @@ function survey_reset_screen()
 	var pre_campus = $('input[name="preselected_campus"]').val();
 	if(pre_campus == "") pre_campus = 'none';
 	$('.screen').hide();
-	$('.screens').children().first().show();
+  survey_show_screen("first");
 	$('input[type="email"],input[type="tel"],input[type="text"]').val('').removeClass('input_error');
 	$('input[type="radio"],input[type="checkbox"]').prop('checked', false);
 	$('input[type="radio"]').parent().removeClass('input_error');
@@ -82,8 +81,8 @@ function survey_update_buttons()
 	switch($('.screen:visible').attr('order')) {
 		
 		case 'first':
-			$('#reset-button').hide();
-			$('#back-button').hide();
+			$('#reset-button').show();
+      $('#submit-button').show();
 			break;
 			
 		case 'last':
