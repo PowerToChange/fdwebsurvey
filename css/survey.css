@@ -1,143 +1,19 @@
 
-html {
-	height: 100%;
-	background-size: cover;
+#p2clogo {
+  width: 640px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	font-family: Tahoma, Verdana, Arial, sans-serif;
-	width: 100%;
-	height: 100%;
+h4 {
+  margin-top: 50px;
 }
 
-#viewer {
-	position:relative;
-	text-align: left;
-	height: 100%;
-	
-	font-size: 0.75em; 
+.form-group {
+  margin-top: 40px;
 }
 
-.not_visible { display: none; }
-
-.container {
-	/* border: 1px dashed red;*/ 
-}
-
-input { height: 1em; }
-input[type=radio] { margin-right: 0.3em;}
-
-.size_5 { font-size: 4em; }
-.size_3 { font-size: 1.75em; }
-.size_2 { font-size: 1.25em; }
-
-.push5 { margin-top: 2.5%; }
-.push10 { margin-top: 5%; }
-.push20 { margin-top: 20%; }
-.alignright { text-align: right; }
-.textcenter { text-align: center; }
-.original_size img { width: auto; }
-.screen {
-}
-
-#messages {
-	position: absolute;
-	bottom: 15%;
-	right: 0;
-	text-align: right;
-}
-
-img { width: 100%; }
-
-.errors {color: #F99839;}
-.input_error { background-color: #FFE683; }
-div.input_error {background-color: #FFE683; }
-select, input[type=text], input[type=tel], input[type=email]  { width: 7em;  }
-#messages { font-size: 0.9em; }
-
-#action-buttons a {
-	background-color: #0000FF;
-	background-image: -o-linear-gradient(#21B6EA, #0079C1);
-	background-image: -moz-linear-gradient(#21B6EA, #0079C1);
-	background-image: -webkit-linear-gradient(#21B6EA, #0079C1);
-	background-image: -ms-linear-gradient(#21B6EA, #0079C1);
-	background-image: linear-gradient(#21B6EA, #0079C1);
-	color: white;
-	border-radius: 1.5em;
-	padding: 0.5em 1em;
-	cursor: pointer;
-	margin: 0 5% 0 0;
-	float: left; 
-	text-decoration: none;
-	border: 0.1em solid rgba(0,0,70,.3);
-	box-shadow: 0.15em 0.15em 0.3em 0.01em rgba(0,0,0,.8);
-}
-
-#action-buttons a:active {
-	box-shadow: inset 0.15em 0.15em 0.3em 0.01em rgba(0,0,0,.8);
-}
-
-#action-buttons a.forward-button {
-	margin: 0 0 0 5%;
-	float: right;
-}
-
-#action-buttons {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-.selector {
-	cursor: pointer;
-}
-
-@media screen and (max-width: 450px) {
-	html { background: #FFF; }
-	.wrapper { padding: 0; border: none; box-shadow: none; border-radius: none; }
-	#viewer { font-size: 0.75em; }
-	.container { height: 340px; /* iPhone portrait*/  }
-	.max33 { width: 50%; }
-	.grid_5.indented { width: 80%; margin-left: 10%; margin-right:10%; }
-	.alignright { text-align: left; }
-}
-@media screen and (min-width: 450px) {
-	html { background: #FFF; }
-	.wrapper { padding: 0; border: none; box-shadow: none; border-radius: none;  }
-	#viewer { font-size: 0.87em; }
-	.container { height: 240px; /* iPhone landscape */ }
-}
-@media screen and (min-width: 550px) {
-	html { background: url('../img/surveybkgtst.jpg') #000; background-size: cover; }
-	.wrapper {
-		padding: 2em;
-		max-width: 1000px;
-		border: 0.25em solid rgba(0,0,0,.8);
-		border-radius: 5em 2em;
-		background: #FFF;
-		background-clip: padding-box;
-		margin: 4em auto;
-		box-shadow: inset 0.25em 0.25em 0.75em 0.2em rgba(0,0,0,.8);
-	}
-	#viewer { font-size: 1em; }
-	.container { height: 275px; }
-}
-@media screen and (min-width: 650px) {
-	#viewer { font-size: 1.15em; }
-	.container { height: 325px; }
-}
-@media screen and (min-width: 750px) {
-	#viewer { font-size: 1.3em; }
-	.container { height: 375px; }
-}
-@media screen and (min-width: 850px) {
-	#viewer { font-size: 1.5em; }
-	.container { height: 425px; }
-}
-@media screen and (min-width: 950px) {
-	#viewer { font-size: 1.75em; }
-	.container { height: 475px; }
+.btn {
+  margin-top: 20px;
+  margin-bottom: 50px;
 }

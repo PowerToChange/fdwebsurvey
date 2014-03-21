@@ -7,15 +7,16 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    <link href="css/survey.css" rel="stylesheet" media="screen">
 	  
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	</head>
 	<body>
 
     <div class="container" order="last">
-      <div class=" ">
-        <object data="img/P2C-S_LOGO.svg" type="image/svg+xml">
-          <a href="img/P2C-S_LOGO.svg">
+      <div id="p2clogo">
+        <object data="img/logo-survey.svg" type="image/svg+xml">
+          <a href="img/logo-survey.svg">
             <!--[if lte IE 8]-->
               <img src="img/p2c.gif"/>
             <!--[endif]-->
@@ -149,13 +150,16 @@
           <label for="inputLastName">Last Name</label>
           <input id="inputLastName" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_last_name]"type="text" class="form-control" placeholder="Last Name" />
         </div>
-        <div class="radio">
-          <input id="radio-male" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="2">
-          <label for="radio-male">Male</label>
-        </div>
-        <div class="radio">
-          <input id="radio-female" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="1">
-          <label for="radio-female">Female</label>
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="radio">
+            <input id="radio-male" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="2">
+            <label for="radio-male">Male</label>
+          </div>
+          <div class="radio">
+            <input id="radio-female" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="1">
+            <label for="radio-female">Female</label>
+          </div>
         </div>
         <div class="form-group">
           <label for="inputPhoneNumber">Phone Number</label>
@@ -175,6 +179,7 @@
           <label for="radio-y2">No</label>
         </div>
         <button type="submit" class="btn btn-primary" data-dismiss="modal">Done</button>
+        <button type="button" class="btn btn-link" data-dismiss="modal">Reset</button>
     		<!-- (person entering data)-->
     		<input type="hidden" name="submitted[civicrm_1_activity_1_cg17_custom_151]" value="crave.mycravings.ca" /> 
     		<!--(notes)-->
