@@ -12,7 +12,7 @@
 	</head>
 	<body>
 
-    <div class="container screen" order="last">
+    <div class="container" order="last">
       <div class=" ">
         <object data="img/P2C-S_LOGO.svg" type="image/svg+xml">
           <a href="img/P2C-S_LOGO.svg">
