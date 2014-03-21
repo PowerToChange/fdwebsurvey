@@ -5,248 +5,193 @@
 		<title>P2C Survey</title>
     <link rel="icon" href="/favicon.ico" />
     <link rel="shortcut icon" href="/favicon.ico" />
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	  <script src="js/jquery.touchSwipe.min.js"></script>
-	  <script src="js/surveys.js"></script>
-	  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-	  <link rel="stylesheet" type="text/css" href="css/grid.css">
-	  <link rel="stylesheet" type="text/css" href="css/survey.css">
-	  <link rel="stylesheet" type="text/css" href="css/animations.css">
-
-		<!-- typekit -->
-		<script type="text/javascript" src="//use.typekit.net/tvn8qzj.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		<!-- /typekit -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 	  
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	</head>
 	<body>
-  	<form action="https://hub.p2c.com/node/11" method="post">
 
-		<div class="wrapper">
-			<div class="container">
-				<div id="viewer" class="tk-nimbus-sans">
-					<noscript>
-						<div class="grid_7 size_3 push20">Sorry, you really need to turn on javascript to fill this survey online.</div>
-					</noscript>
-				  <div class="screens not_visible">
-				  	<div class="screen" order="first">
-				  		<div class="grid_7 size_2 alpha omega textcenter">
-				  			Experience what a student experiences when they fill out a survey for P2C
-				  		</div>
-				      <div class="grid_7"><br />The one thing I crave most is:</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-cwf" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup-fun" />
-								<span class="selector" activates="radio-cwf">fun</span>
-							</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-cwr" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup-relationship" />
-								<span class="selector" activates="radio-cwr">relationship</span>
-							</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-cwm" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup-money" />
-								<span class="selector" activates="radio-cwm">money</span>
-							</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-cwg" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup-grades" />
-								<span class="selector" activates="radio-cwg">good grades</span>
-							</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-cwo" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup_other" />
-								<span class="selector" activates="radio-cwo">other</span>
-							</div>
-							<!-- if other -->
-							<input type="hidden" name="submitted[civicrm_1_activity_1_cg9_custom_126]" value="" />
-				  	</div>
-				  	<div class="screen">
-							<div class="grid_7">I’d like a <strong>FREE MAGAZINE BY PERSONAL DELIVERY</strong> to help me explore my craving for:</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-msc" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-spiritual" />
-								<span class="selector" activates="radio-msc">spiritual connection</span>
-							</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-mj" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-justice" />
-								<span class="selector" activates="radio-mj">a real justice</span>
-							</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-me" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-escape" />
-								<span class="selector" activates="radio-me">escape from the dreariness of life</span>
-							</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-mss" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-success" />
-								<span class="selector" activates="radio-mss">achievement &amp; success</span>
-							</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-ml" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-love" />
-								<span class="selector" activates="radio-ml">love without conditions</span>
-							</div>
-							<div class="grid_6 indented omega">
-								<input id="radio-mn" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-no" />
-								<span class="selector" activates="radio-mn">No, thanks</span>
-							</div>
-				  	</div>
-				  	<div class="screen">
-							<div class="grid_7"><em>Power to Change loves to help students discover Jesus.</em></div>
-							<div class="grid_7">How interested are you in having a chat about how to begin a journey with Jesus Christ?</div>
-							<div class="grid_1 indented">
-								<input id="radio-1" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-1" />
-								<span class="selector" activates="radio-1">1<br/>not</span>
-							</div>
-							<div class="grid_1">
-								<input id="radio-2" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-2" />
-								<span class="selector" activates="radio-2">2<br/> </span>
-							</div>
-							<div class="grid_1">
-								<input id="radio-3" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-3" />
-								<span class="selector" activates="radio-3">3<br/>maybe</span>
-							</div>
-							<div class="grid_1">
-								<input id="radio-4" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-4" />
-								<span class="selector" activates="radio-4">4</span>
-							</div>
-							<div class="grid_1">
-								<input id="radio-5" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-5" />
-								<span class="selector" activates="radio-5">5<br/>very</span>
-							</div>
-				  	</div>
-				  	<div class="screen">
-							<div class="grid_7">On my spiritual journey I’d like to:</div>
-							<div class="grid_6 indented">
-								<input id="radio-wec" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-explore" />
-								<span class="selector" activates="radio-wec">explore the deeper meaning of my cravings</span>
-							</div>
-							<div class="grid_6 indented">
-								<input id="radio-wor" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-online" />
-								<span class="selector" activates="radio-wor">get connected to online resources about my cravings</span>
-							</div>
-							<div class="grid_6 indented">
-								<input id="radio-whm" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-p2c" />
-								<span class="selector" activates="radio-whm">hear more about Power to Change</span>
-							</div>
-							<div class="grid_6 indented">
-								<input id="radio-wg" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-grow" />
-								<span class="selector" activates="radio-wg">grow in my relationship with Jesus</span>
-							</div>
-							<div class="grid_6 indented">
-								<input id="radio-wn" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-nothing" />
-								<span class="selector" activates="radio-wn">do nothing right now</span>
-							</div>
-            </div>
-            <div class="screen">
-              <div class="grid_7 size_3 textcenter">We hope that gives you an idea of one of the creative methods that we use to engage  students on campus.  Now we have a few questions for you...</div>
-            </div>
-            <div class="screen">
-              <div class="grid_7">How old were you when you really began to explore faith questions?</div>
-              <div class="grid_6 indented omega">
-                <input id="radio-five" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="5-10" />
-                <span class="selector" activates="radio-five">5-10</span>
-              </div>
-              <div class="grid_6 indented omega">
-                <input id="radio-eleven" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="11-18" />
-                <span class="selector" activates="radio-eleven">11-18</span>
-              </div>
-              <div class="grid_6 indented omega">
-                <input id="radio-nineteen" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="19-25" />
-                <span class="selector" activates="radio-nineteen">19-25</span>
-              </div>
-              <div class="grid_6 indented omega">
-                <input id="radio-twenty-six" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="26-40" />
-                <span class="selector" activates="radio-twenty-six">26-40</span>
-              </div>
-              <div class="grid_6 indented omega">
-                <input id="radio-forty-one" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="41-64" />
-                <span class="selector" activates="radio-forty-one">41-64</span>
-              </div>
-              <div class="grid_6 indented omega">
-                <input id="radio-sixty-five" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="65+" />
-                <span class="selector" activates="radio-ixty-five">65+</span>
-              </div>
-            </div>
-            <div class="screen" order="last">
-              <div class="grid_3 alpha alignright">First Name: </div><div class="grid_4 omega"><input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_first_name]" display-name="first name" type="text" /></div>
-              <div class="grid_3 alpha alignright">Last Name: </div><div class="grid_4 omega"><input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_last_name]" display-name="last name" type="text" /></div>
-              <div class="grid_3 alpha">&nbsp;</div>
-              <div class="grid_4 omega">
-                <input id="radio-male" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="2">
-                <span class="selector" activates="radio-male">Male</span><br />
-                <input id="radio-female" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="1">
-                <span class="selector" activates="radio-female">Female</span>
-              </div>
-              <div class="grid_3 alpha alignright">Phone Number: </div><div class="grid_4 omega"><input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_phone_phone]" type="tel" /></div>
-              <div class="grid_3 alpha alignright">Email: </div><div class="grid_4 omega"><input name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_email_email]" type="email" /></div>
-              <div class="grid_3 alpha push5">
-              Would you like to receive email updates from P2C-Students?
-              </div>
-              <div class="grid_4 omega push5">
-                <input id="radio-y1" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_activity_1_cg33_custom_242]" value="newsletter_yes" />
-                <span class="selector" activates="radio-y1">Yes</span><br />
-                <input id="radio-y2" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_activity_1_cg33_custom_242]" value="newsletter_no" />
-                <span class="selector" activates="radio-y2">No</span>
-              </div>
-            </div>
-            <div class="screen" order="thankyou">
-              <div class="grid_7 textcenter size_5">
-                THANK YOU!
-              </div>
-              <div class="grid_2 alpha">&nbsp;</div>
-              <div class="grid_3 push10">
-                <object data="img/p2c.svg" type="image/svg+xml">
-                  <a href="img/p2c.svg">
-                    <!--[if lte IE 8]-->
-                      <img src="img/p2c.gif"/>
-                    <!--[endif]-->
-                  </a>
-                </object>
-              </div>
-            </div>
-				  	<div class="screen" order="error-submitting">
-				  		<div class="grid_7 textcenter size_3 push10">We're sorry, it looks like there was an error while trying to submit your survey.</div>
-				  		<div class="grid_7 textcenter size_3 push10">Would you like to try to submit it again?</div>
-				  	</div>
-				  	<div class="screen" order="submitting">
-				  		<div class="grid_7 textcenter size_3 push10">Submitting &hellip;</div>
-				  		<div class="grid_7 textcenter original_size size_3 push10"><img src="img/submitting.gif" /></div>
-				  	</div>
-				  	<div class="screen" order="hidden_stuff">
-							<!-- (person entering data)-->
-							<input type="hidden" name="submitted[civicrm_1_activity_1_cg17_custom_151]" value="crave.mycravings.ca" /> 
-							<!--(notes)-->
-							<input type="hidden" name="submitted[civicrm_1_activity_1_activity_details]" value="" /> 
-							<input type="hidden" name="details[sid]" value="" />
-							<input type="hidden" name="details[page_num]" value="1" />
-							<input type="hidden" name="details[page_count]" value="1" />
-							<input type="hidden" name="details[finished]" value="0" />
-							<input type="hidden" name="form_build_id" value="form-5S54jXC8NyOmkaD6xHpem8wHQEbuB8cQ9aZDz9FA89c" />
-							<input type="hidden" name="form_id" value="webform_client_form_38" />
-				  	</div>
-				  </div>
-				  <div id="messages">
-				  	
-				  </div>
-				  <div id="action-buttons" class="not_visible">
-				  	<a id="back-button">Back</a>
-				  	<a id="next-button" class="forward-button">Next</a>
-				  	<a id="retry-button" class="forward-button">Try Submit Again</a>
-				  	<a id="reset-button">Reset Survey</a>
-				  	<a id="submit-button" class="forward-button">Submit Survey</a>
-				  	<a id="visit-button" class="forward-button" href="http://p2c.com">Visit p2c.com</a>
-				  </div>
-				</div>
-			</div>
-		</div>
+    <div class="container screen" order="last">
+      <div class=" ">
+        <object data="img/P2C-S_LOGO.svg" type="image/svg+xml">
+          <a href="img/P2C-S_LOGO.svg">
+            <!--[if lte IE 8]-->
+              <img src="img/p2c.gif"/>
+            <!--[endif]-->
+          </a>
+        </object>
+      </div>
+  		<h2>Experience what a student experiences when they fill out a survey for P2C</h2>
+  		<form class="form">
+        <h4>The one thing I crave most is:</h4>
+    		<div class="radio">
+    			<input id="radio-cwf" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup-fun" />
+    			<label for="radio-cwf">fun</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-cwr" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup-relationship" />
+    			<label for="radio-cwr">relationship</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-cwm" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup-money" />
+    			<label for="radio-cwm">money</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-cwg" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup-grades" />
+    			<label for="radio-cwg">good grades</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-cwo" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_64]" value="warmup_other" />
+    			<label for="radio-cwo">other</label>
+    		</div>
+    		<!-- if other -->
+    		<input type="hidden" name="submitted[civicrm_1_activity_1_cg9_custom_126]" value="" />
+    		<h4>I’d like a <strong>FREE MAGAZINE BY PERSONAL DELIVERY</strong> to help me explore my craving for:</h4>
+    		<div class="radio">
+    			<input id="radio-msc" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-spiritual" />
+    			<label for="radio-msc">spiritual connection</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-mj" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-justice" />
+    			<label for="radio-mj">a real justice</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-me" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-escape" />
+    			<label for="radio-me">escape from the dreariness of life</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-mss" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-success" />
+    			<label for="radio-mss">achievement &amp; success</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-ml" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-love" />
+    			<label for="radio-ml">love without conditions</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-mn" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_65]" value="magazine-no" />
+    			<label for="radio-mn">No, thanks</label>
+    		</div>
+    		<h4><em>Power to Change loves to help students discover Jesus.</em></h4>
+    		<h4>How interested are you in having a chat about how to begin a journey with Jesus Christ?</h4>
+    		<div class="radio">
+    			<input id="radio-1" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-1" />
+    			<label for="radio-1">1 - not</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-2" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-2" />
+    			<label for="radio-2">2</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-3" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-3" />
+    			<label for="radio-3">3 - maybe</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-4" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-4" />
+    			<label for="radio-4">4</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-5" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_66]" value="gauge-5" />
+    			<label for="radio-5">5 - very</label>
+    		</div>
+    		<h4>On my spiritual journey I’d like to:</h4>
+    		<div class="radio">
+    			<input id="radio-wec" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-explore" />
+    			<label for="radio-wec">explore the deeper meaning of my cravings</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-wor" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-online" />
+    			<label for="radio-wor">get connected to online resources about my cravings</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-whm" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-p2c" />
+    			<label for="radio-whm">hear more about Power to Change</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-wg" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-grow" />
+    			<label for="radio-wg">grow in my relationship with Jesus</label>
+    		</div>
+    		<div class="radio">
+    			<input id="radio-wn" type="radio" name="submitted[civicrm_1_activity_1_cg9_custom_67]" value="journey-nothing" />
+    			<label for="radio-wn">do nothing right now</label>
+    		</div>
+        <h3>We hope that gives you an idea of one of the creative methods that we use to engage  students on campus.  Now we have a few questions for you...</h3>
+        <h4>How old were you when you really began to explore faith questions?</h4>
+        <div class="radio">
+          <input id="radio-five" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="5-10" />
+          <label for="radio-five">5-10</label>
+        </div>
+        <div class="radio">
+          <input id="radio-eleven" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="11-18" />
+          <label for="radio-eleven">11-18</label>
+        </div>
+        <div class="radio">
+          <input id="radio-nineteen" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="19-25" />
+          <label for="radio-nineteen">19-25</label>
+        </div>
+        <div class="radio">
+          <input id="radio-twenty-six" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="26-40" />
+          <label for="radio-twenty-six">26-40</label>
+        </div>
+        <div class="radio">
+          <input id="radio-forty-one" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="41-64" />
+          <label for="radio-forty-one">41-64</label>
+        </div>
+        <div class="radio">
+          <input id="radio-sixty-five" type="radio" name="submitted[civicrm_1_activity_1_cg33_custom_241]" value="65+" />
+          <label for="radio-sixty-five">65+</label>
+        </div>
+        <div class="form-group">
+          <label for="inputFirstName">First Name</label>
+          <input id="inputFirstName" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_first_name]" type="text" class="form-control" placeholder="First Name" />
+        </div>
+        <div class="form-group">
+          <label for="inputLastName">Last Name</label>
+          <input id="inputLastName" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_last_name]"type="text" class="form-control" placeholder="Last Name" />
+        </div>
+        <div class="radio">
+          <input id="radio-male" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="2">
+          <label for="radio-male">Male</label>
+        </div>
+        <div class="radio">
+          <input id="radio-female" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_contact_gender_id]" value="1">
+          <label for="radio-female">Female</label>
+        </div>
+        <div class="form-group">
+          <label for="inputPhoneNumber">Phone Number</label>
+          <input id="inputPhoneNumber" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_phone_phone]" type="tel" class="form-control" placeholder="Phone Number" />
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input id="inputEmail" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_contact_1_email_email]" type="email" class="form-control" placeholder="Email" />
+        </div>
+        <h4>Would you like to receive email updates from P2C-Students?</h4>
+        <div class="radio">
+          <input id="radio-y1" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_activity_1_cg33_custom_242]" value="newsletter_yes" />
+          <label for="radio-y1">Yes</label>
+        </div>
+        <div class="radio">
+          <input id="radio-y2" type="radio" name="submitted[civicrm_1_contact_1_fieldset_fieldset][civicrm_1_activity_1_cg33_custom_242]" value="newsletter_no" />
+          <label for="radio-y2">No</label>
+        </div>
+        <button type="submit" class="btn btn-primary" data-dismiss="modal">Done</button>
+    		<!-- (person entering data)-->
+    		<input type="hidden" name="submitted[civicrm_1_activity_1_cg17_custom_151]" value="crave.mycravings.ca" /> 
+    		<!--(notes)-->
+    		<input type="hidden" name="submitted[civicrm_1_activity_1_activity_details]" value="" /> 
+    		<input type="hidden" name="details[sid]" value="" />
+    		<input type="hidden" name="details[page_num]" value="1" />
+    		<input type="hidden" name="details[page_count]" value="1" />
+    		<input type="hidden" name="details[finished]" value="0" />
+    		<input type="hidden" name="form_build_id" value="form-5S54jXC8NyOmkaD6xHpem8wHQEbuB8cQ9aZDz9FA89c" />
+    		<input type="hidden" name="form_id" value="webform_client_form_38" />
+      </form>
+    </div>
 
 
-  </form>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-	  ga('create', 'UA-2437988-41', 'mycravings.ca');
-	  ga('send', 'pageview');
-	
-	</script>
 
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/surveys.js"></script>
 	</body>
 </html>
