@@ -6,10 +6,9 @@
   <body>
 <?php
 require('lib/twilio-php/Services/Twilio.php'); 
+require('civi_constants.php'); 
 
-$account_sid = 'AC1eb265d0059f4559b87e60bfec2c9eb1'; 
-$auth_token = '3e5137c23e3d4ad1e5d4886672856884';
-$client = new Services_Twilio($account_sid, $auth_token); 
+$client = new Services_Twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN); 
 
 $firstname = 'T';
 if(isset($_POST['submitted']['civicrm_1_contact_1_fieldset_fieldset']['civicrm_1_contact_1_contact_first_name']))
